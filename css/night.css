@@ -1,0 +1,9 @@
+/*
+ * Light Design
+ */
+
+body {
+    background-image: url('../img/EH_night.jpg');
+    background-repeat: repeat;
+    background-position: top left;
+}

@@ -3,11 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Jan Brennenstuhl -- Developer -- @jbspeakr
+    Julia Kloiber -- Organizer -- @j_kloiber
+    Anna -- Designer -- @
 
 # THANKS
 
-    <name>
+    Supporter: Open Knowledge Foundation Deutschland e.V.
 
 # TECHNOLOGY COLOPHON
 
