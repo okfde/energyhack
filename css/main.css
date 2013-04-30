@@ -93,17 +93,107 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-body {
-    padding-top: 60px;
+@font-face {
+    font-family: 'misobold';
+    src: url('../font/miso-bold-webfont.eot');
+    src: url('../font/miso-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/miso-bold-webfont.woff') format('woff'),
+         url('../font/miso-bold-webfont.ttf') format('truetype'),
+         url('../font/miso-bold-webfont.svg#misobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'misolight';
+    src: url('../font/miso-light-webfont.eot');
+    src: url('../font/miso-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/miso-light-webfont.woff') format('woff'),
+         url('../font/miso-light-webfont.ttf') format('truetype'),
+         url('../font/miso-light-webfont.svg#misolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'misoregular';
+    src: url('../font/miso-regular-webfont.eot');
+    src: url('../font/miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/miso-regular-webfont.woff') format('woff'),
+         url('../font/miso-regular-webfont.ttf') format('truetype'),
+         url('../font/miso-regular-webfont.svg#misoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
+body {
+    padding-top: 60px;
+    font-family: 'misoregular', sans-serif;
+}
 
-
-
-
-
-
-
+.social-media li {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+.social-media li a {
+    font-family: 'misobold', sans-serif;
+    padding: 2px 20px;
+    background: #FFEC00;
+    font-size: 1.2em;
+    color: #3D3D3F;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.social-media li a:hover {
+    text-decoration: none;
+}
+.teaser {
+    margin: 0 0 60px 0;
+}
+.teaser h1 {
+    font-size: 15em;
+    text-transform: uppercase;
+    padding: 20px 20px 0;
+    line-height: 0.8em;
+}
+.teaser h1 span.lightning{
+    background-image: url('../img/strom_icon.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 120px;
+}
+.teaser h2 {
+    font-family: 'misolight', sans-serif;
+    font-size: 6em;
+    text-transform: uppercase;
+    line-height: 0.9em;
+    text-align: center;
+}
+.teaser h3 {
+    font-family: 'misolight', sans-serif;
+    font-size: 10em;
+    text-transform: uppercase;
+    padding: 0 0 15px;
+    line-height: 0.8em;
+    text-align: center;
+}
+.text {
+    margin: 30px 0;
+}
+blockquote {
+    text-transform: uppercase;
+    font-size: 2.1em;
+    padding: 20px 30px 0;
+    border: none;
+}
+blockquote:before {
+    content: "\201C";
+    font-size: 4em;
+    margin-right: .25em;
+    line-height: .8em;
+    float: left;
+}
 
 
 

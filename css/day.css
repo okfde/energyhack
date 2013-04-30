@@ -7,3 +7,23 @@ body {
     background-repeat: repeat;
     background-position: top left;
 }
+
+.dark {
+    background: #3D3D3F;
+    color: #FFF;
+}
+.text {
+    background: #00C786;
+    color: #FFF;
+}
+.social-media li a {
+    background: #FFEC00;
+    color: #3D3D3F;
+}
+.social-media li a:hover {
+    background: #3D3D3F;
+    color: #FFEC00;
+}
+.teaser h2 {
+    color: #FFEC00;
+}
