@@ -1,0 +1,13 @@
+
+# General Stettings
+permalink: none
+
+# Template Variables
+title: 'EnergyHack Berlin'
+github: 'https://github.com/okfde/energyhack'
+contact: 'julia.kloiber@okfn.org'
+
+# Navigation
+navigation:
+- text: 'Beispiele'
+  url: '/#beispiele'
