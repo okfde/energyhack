@@ -31,3 +31,18 @@ body {
 #teaser h2 {
     color: #FFEC00;
 }
+#register a {
+    background: #3D3D3F;
+    color: #FFF;
+}
+#register a:hover {
+    background: #3D3D3F;
+    color: #FFEC00;
+}
+#about a {
+    color: #FFEC00;
+}
+#about a:hover {
+    color: #FFF;
+    text-decoration: none;
+}

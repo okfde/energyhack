@@ -209,14 +209,14 @@ blockquote:before {
 #challenges {
     margin-top: 0;
 }
-#challenges h4 {
+h4 {
     font-weight: normal;
     text-transform: uppercase;
-    padding: 20px 20px 0;
+    padding: 10px 20px 0;
     font-size: 2em;
-    line-height: 1em;
+    line-height: .8em;
 }
-#challenges p {
+p {
     padding: 0 10px 30px 20px;
     font-size: 2em;
 }
@@ -225,7 +225,6 @@ blockquote:before {
 }
 #challenges ul.thumbnails {
     padding: 0 20px;
-
 }
 #challenges .thumbnail {
     padding: 0;
@@ -243,6 +242,28 @@ blockquote:before {
 }
 #challenges .thumbnail p {
     font-size: 1em;
+    padding: 0;
+}
+#register a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 6em;
+    text-transform: uppercase;
+    line-height: 1.1em;
+}
+#about {
+    margin-top: 0;
+    padding: 20px 0 0 0;
+}
+#about a:after {
+    content: " >";
+}
+#map {
+    height: 350px;
+    margin-top: 15px;
+}
+#location {
+    margin-top: 0;
     padding: 0;
 }
 
@@ -281,6 +302,9 @@ blockquote:before {
     }
     #teaser h3 {
         font-size: 3em;
+    }
+    #register a {
+        font-size: 4em;
     }
 }
 
