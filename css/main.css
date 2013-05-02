@@ -152,10 +152,13 @@ body {
     margin: 0 0 60px 0;
 }
 .teaser h1 {
+    margin: 0;
     font-size: 15em;
     text-transform: uppercase;
     padding: 20px 20px 0;
+    letter-spacing: -10px;
     line-height: 0.8em;
+    text-align: center;
 }
 .teaser h1 span.lightning{
     background-image: url('../img/strom_icon.png');
@@ -164,19 +167,23 @@ body {
     padding-left: 120px;
 }
 .teaser h2 {
+    margin: 0;
     font-family: 'misolight', sans-serif;
     font-size: 6em;
     text-transform: uppercase;
     line-height: 0.9em;
     text-align: center;
+    letter-spacing: -4px;
 }
 .teaser h3 {
+    margin: 0;
     font-family: 'misolight', sans-serif;
     font-size: 10em;
     text-transform: uppercase;
     padding: 0 0 15px;
     line-height: 0.8em;
     text-align: center;
+    letter-spacing: -7px;
 }
 .text {
     margin: 30px 0;
