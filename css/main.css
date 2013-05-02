@@ -156,7 +156,7 @@ body {
 }
 #teaser h1 {
     margin: 0;
-    font-size: 14em;
+    font-size: 10em;
     text-transform: uppercase;
     padding: 20px 20px 0;
     line-height: 0.8em;
@@ -171,7 +171,7 @@ body {
 #teaser h2 {
     margin: 0;
     font-family: 'misolight', sans-serif;
-    font-size: 5em;
+    font-size: 4em;
     text-transform: uppercase;
     line-height: 0.9em;
     text-align: center;
@@ -179,12 +179,13 @@ body {
 #teaser h3 {
     margin: 0;
     font-family: 'misolight', sans-serif;
-    font-size: 9em;
+    font-size: 7em;
     text-transform: uppercase;
     padding: 0 0 15px;
     line-height: 0.8em;
     text-align: center;
 }
+
 blockquote {
     text-transform: uppercase;
     font-size: 2em;
@@ -213,16 +214,75 @@ blockquote:before {
     text-transform: uppercase;
     padding: 20px 20px 0;
     font-size: 2em;
+    line-height: 1em;
 }
 #challenges p {
-    padding: 0 20px 30px;
+    padding: 0 10px 30px 20px;
     font-size: 2em;
 }
 .spaceless {
     margin: 0;
 }
+#challenges ul.thumbnails {
+    padding: 0 20px;
 
+}
+#challenges .thumbnail {
+    padding: 0;
+    border: none;
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+#challenges .thumbnail p {
+    font-size: 1em;
+    padding: 0;
+}
 
+@media (min-width: 1200px){
+    #teaser h1 {
+        font-size: 14em;
+    }
+    #teaser h2 {
+        font-size: 5em;
+    }
+    #teaser h3 {
+        font-size: 9em;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    #teaser h1 {
+        font-size: 7em;
+    }
+    #teaser h2 {
+        font-size: 3em;
+    }
+    #teaser h3 {
+        font-size: 5em;
+    }
+}
+@media (max-width: 767px) {
+    #teaser h1 {
+        font-size: 6em;
+    }
+    #teaser h1 span.lightning{
+        background-image: none;
+        padding-left: 0;
+    }
+    #teaser h2 {
+        font-size: 2em;
+    }
+    #teaser h3 {
+        font-size: 3em;
+    }
+}
 
 /* ==========================================================================
    Helper classes
