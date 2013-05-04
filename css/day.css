@@ -20,6 +20,27 @@ body {
     background: #FFEC00;
     color: #3D3D3F;
 }
+.color2shade1 {
+    background: #06ba80;
+    color: #FFF;
+}
+.color2shade2 {
+    background: #0bae79;
+    color: #FFF;
+}
+.color2shade3 {
+    background: #10a373;
+    color: #FFF;
+}
+.color2shade4 {
+    background: #14996e;
+    color: #FFF;
+}
+.color2shade5 {
+    background: #189069;
+    color: #FFF;
+}
+
 .social-media li a {
     background: #FFEC00;
     color: #3D3D3F;
