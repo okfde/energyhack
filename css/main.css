@@ -214,9 +214,12 @@ blockquote:before {
 h4 {
     font-weight: normal;
     text-transform: uppercase;
-    padding: 10px 20px 0;
+    padding: 0 20px;
     font-size: 2em;
     line-height: .8em;
+}
+#challenges .span6 h4:first-child {
+    padding: 20px 20px 0;
 }
 p {
     padding: 0 10px 30px 20px;
