@@ -270,12 +270,16 @@ p {
     text-align: center;
 }
 #schedule p {
-    padding: 20px;
+    padding: 20px 0;
     font-size: 1.5em;
 }
 #schedule .span2 {
     min-height: 225px;
 }
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
 
 @media (min-width: 1200px){
     #teaser h1 {
@@ -297,6 +301,9 @@ p {
     }
     #teaser h3 {
         font-size: 5em;
+    }
+    #schedule p {
+        font-size: 1em;
     }
 }
 @media (max-width: 767px) {
