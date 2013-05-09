@@ -67,3 +67,10 @@ body {
     color: #FFF;
     text-decoration: none;
 }
+footer li a {
+    color: #fff;
+}
+footer li a:hover {
+    color: #FFEC00;
+    text-decoration: none;
+}
