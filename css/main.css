@@ -131,6 +131,9 @@ body {
     padding-top: 50px;
     font-family: 'misoregular', sans-serif;
 }
+ul {
+    list-style: none;
+}
 #quotes .row-fluid:first-child {
     margin-bottom: 20px;
 }
@@ -294,9 +297,6 @@ footer {
     margin-top: 50px;
     padding-top: 20px;
     padding-bottom: 50px;
-}
-footer ul {
-    list-style: none;
 }
 footer li {
     font-size: 1.2em;
