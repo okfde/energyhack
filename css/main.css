@@ -276,7 +276,7 @@ p {
 }
 #map {
     height: 350px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 #location {
     padding: 0;
@@ -288,7 +288,7 @@ p {
 }
 #schedule p {
     padding: 20px 0;
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 #schedule .span2 {
     min-height: 225px;
