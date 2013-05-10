@@ -131,6 +131,9 @@ body {
     padding-top: 50px;
     font-family: 'misoregular', sans-serif;
 }
+.container {
+    position: relative;
+}
 ul {
     list-style: none;
 }
@@ -303,7 +306,15 @@ footer li {
     text-decoration: none;
     text-transform: uppercase;
 }
-
+#switch {
+    display: inline-block;
+    height: 50px;
+    left: -150px;
+    position: absolute;
+    top: 32px;
+    width: 88px;
+    border: none;
+}
 
 /* ==========================================================================
    Media Queries

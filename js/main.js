@@ -85,3 +85,15 @@ function initialize() {
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
 }
+
+var dayCSS = 'day';
+var nightCSS = 'night';
+
+function switchStyleSheet() {
+  if (title == dayCSS){
+    title = nightCSS;
+  } else {
+    title = dayCSS;
+  }
+  setActiveStyleSheet(title);
+}

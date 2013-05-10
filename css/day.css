@@ -102,3 +102,9 @@ footer li a:hover {
     color: #FFEC00;
     text-decoration: none;
 }
+#switch {
+    background: url("../img/onoff_sprite.png") no-repeat scroll 0 0 transparent;
+}
+#switch:hover {
+    background-position: 0 -50px;
+}

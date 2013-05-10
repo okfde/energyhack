@@ -20,25 +20,53 @@ body {
     background: #FFEC00;
     color: #3D3D3F;
 }
+
+.clock {
+    width: 19px;
+    height: 19px;
+    background:none no-repeat left center;
+    background-image: url('../img/uhr_night_sprite.png');
+    background-position: 0 0;
+    display: inline-block;
+    margin-right: 5px;
+}
+
 .color2shade1 {
     background: #06ba80;
     color: #3D3D3F;
+    background-position: 0 0;
 }
+.color2shade1 .clock {
+    background-position: 0 -19px;
+}
+
 .color2shade2 {
     background: #0bae79;
     color: #3D3D3F;
+}
+.color2shade2 .clock {
+    background-position: 0 -38px;
 }
 .color2shade3 {
     background: #10a373;
     color: #3D3D3F;
 }
+.color2shade3 .clock {
+    background-position: 0 -57px;
+}
 .color2shade4 {
     background: #14996e;
     color: #3D3D3F;
 }
+.color2shade4 .clock {
+    background-position: 0 -76px;
+}
 .color2shade5 {
     background: #189069;
     color: #3D3D3F;
+}
+.color2shade5 .clock {
+    background-position: 0 -95px;
 }
 
 .social-media li a {
@@ -73,4 +101,10 @@ footer li a {
 footer li a:hover {
     color: #FFEC00;
     text-decoration: none;
+}
+#switch {
+    background: url("../img/onoff_sprite.png") no-repeat scroll 0 -50px transparent;
+}
+#switch:hover {
+    background-position: 0 0;
 }
