@@ -362,6 +362,9 @@ footer li {
     #register a {
         font-size: 4em;
     }
+    footer .span2 img {
+        padding: 20px;
+    }
 }
 
 /* ==========================================================================
