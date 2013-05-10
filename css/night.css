@@ -105,6 +105,6 @@ footer li a:hover {
 #switch {
     background: url("../img/onoff_sprite.png") no-repeat scroll 0 -50px transparent;
 }
-#switch:hover {
+#switch:active {
     background-position: 0 0;
 }
