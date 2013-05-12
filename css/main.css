@@ -171,6 +171,8 @@ ul {
     padding: 20px 20px 0;
     line-height: 0.8em;
     text-align: center;
+    font-weight: normal;
+    font-family: 'misobold',sans-serif;
 }
 #teaser h1 span.lightning{
     background-image: url('../img/strom_icon.png');
@@ -185,16 +187,19 @@ ul {
     text-transform: uppercase;
     line-height: 0.9em;
     text-align: center;
+    font-weight: normal;
+    font-family: 'misobold',sans-serif;
 }
 #teaser h3 {
     margin: 0;
-    font-family: 'misolight', sans-serif;
     font-size: 7em;
     text-transform: uppercase;
     padding: 0 0 15px;
     line-height: 0.8em;
     text-align: center;
-}
+        font-weight: normal;
+    font-family: 'misobold',sans-serif;
+    }
 
 blockquote {
     text-transform: uppercase;
