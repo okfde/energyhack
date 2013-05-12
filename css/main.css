@@ -203,35 +203,36 @@ ul {
 
 blockquote {
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 20px 30px 0;
     border: none;
+    line-height: 1em;
 }
 blockquote:before {
     font-family: 'Arial', sans-serif;
     content: "\201D";
-    font-size: 4em;
+    font-size: 6.250em;
     margin-right: .25em;
-    line-height: .9em;
     float: left;
+    padding-top: 50px;
 }
 .heading {
     padding: 3px 0;
     text-transform: uppercase;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 h4 {
     font-weight: normal;
     text-transform: uppercase;
     padding: 0 20px;
-    font-size: 2em;
-    line-height: .8em;
+    font-size: 1.5em;
+    line-height: 1em;
 }
 p {
     padding: 0 10px 20px 20px;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .spaceless {
     margin: 0;
@@ -270,7 +271,7 @@ p {
 #register a {
     text-align: center;
     text-decoration: none;
-    font-size: 6em;
+    font-size: 3.75em;
     text-transform: uppercase;
     line-height: 1.1em;
     margin-bottom: 50px;
@@ -324,7 +325,7 @@ footer li {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
+/*
 @media (min-width: 1200px){
     #teaser h1 {
         font-size: 14em;
@@ -335,7 +336,8 @@ footer li {
     #teaser h3 {
         font-size: 9em;
     }
-}
+}*/
+
 @media (min-width: 768px) and (max-width: 979px) {
     #teaser h1 {
         font-size: 7em;
@@ -349,6 +351,7 @@ footer li {
     #schedule p {
         font-size: 1em;
     }
+
 }
 @media (max-width: 767px) {
     #teaser h1 {
