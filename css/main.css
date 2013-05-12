@@ -133,6 +133,8 @@ body {
 }
 .container {
     position: relative;
+	max-width:870px;
+
 }
 ul {
     list-style: none;
@@ -339,7 +341,9 @@ footer li {
 }*/
 
 @media (min-width: 768px) and (max-width: 979px) {
-    #teaser h1 {
+  
+	
+	#teaser h1 {
         font-size: 7em;
     }
     #teaser h2 {
