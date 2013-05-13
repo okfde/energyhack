@@ -314,9 +314,9 @@ footer li {
 #switch {
     display: inline-block;
     height: 50px;
-    left: -150px;
+    left: 0;
     position: absolute;
-    top: 32px;
+    top: -35px;
     width: 88px;
     border: none;
 }
