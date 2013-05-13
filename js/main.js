@@ -1,3 +1,7 @@
+/************
+ * Map Code *
+ ************/
+
 var supermarkt = new google.maps.LatLng(52.540403, 13.394625);
 
 function initialize() {
@@ -86,6 +90,10 @@ function initialize() {
   map.setMapTypeId('map_style');
 }
 
+/**********************************
+ * Custom StyleSheetSwitcher Code *
+ **********************************/
+
 var dayCSS = 'day';
 var nightCSS = 'night';
 
@@ -97,3 +105,14 @@ function switchStyleSheet() {
   }
   setActiveStyleSheet(title);
 }
+
+/***************
+ * FadeIn Code *
+ ***************/
+
+$(document).ready(function(){
+    $("#readmore").click(function(e){
+        e.preventDefault();
+        $("#more").fadeToggle();
+    });
+});

@@ -323,26 +323,17 @@ footer li {
     width: 88px;
     border: none;
 }
+.js-hidden {
+    display: none;
+}
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-/*
-@media (min-width: 1200px){
-    #teaser h1 {
-        font-size: 14em;
-    }
-    #teaser h2 {
-        font-size: 5em;
-    }
-    #teaser h3 {
-        font-size: 9em;
-    }
-}*/
 
 @media (min-width: 768px) and (max-width: 979px) {
-  
-	
+
+
 	#teaser h1 {
         font-size: 7em;
     }
