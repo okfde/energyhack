@@ -301,9 +301,6 @@ p {
     padding: 20px 0;
     font-size: 1.6em;
 }
-#schedule .span2 {
-    min-height: 225px;
-}
 footer {
     margin-top: 50px;
     padding-top: 20px;
@@ -326,14 +323,18 @@ footer li {
 .js-hidden {
     display: none;
 }
+#schedule .span2 {
+    margin: 0;
+    width: 145px;
+    min-height: 235px;
+}
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
+/* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-
-
 	#teaser h1 {
         font-size: 7em;
     }
@@ -346,8 +347,14 @@ footer li {
     #schedule p {
         font-size: 1em;
     }
-
+    #schedule .span2 {
+        margin: 0;
+        width: 120px;
+        min-height: 145px;
+    }
 }
+
+/* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
     #teaser h1 {
         font-size: 6em;
@@ -367,6 +374,11 @@ footer li {
     }
     footer .span2 img {
         padding: 20px;
+    }
+    #schedule .span2 {
+        margin: 0;
+        width: 100%;
+        min-height: 145px;
     }
 }
 
