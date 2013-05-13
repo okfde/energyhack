@@ -114,5 +114,6 @@ $(document).ready(function(){
     $("#readmore").click(function(e){
         e.preventDefault();
         $("#more").fadeToggle();
+        $("#readmore").addClass("js-hidden");
     });
 });
