@@ -190,7 +190,7 @@ ul {
     line-height: 0.9em;
     text-align: center;
     font-weight: normal;
-    font-family: 'misobold',sans-serif;
+    letter-spacing: 1px;
 }
 #teaser h3 {
     margin: 0;
@@ -199,8 +199,8 @@ ul {
     padding: 0 0 15px;
     line-height: 0.8em;
     text-align: center;
-        font-weight: normal;
-    font-family: 'misobold',sans-serif;
+    font-weight: normal;
+    font-family: 'misolight',sans-serif;
     }
 
 blockquote {
@@ -262,7 +262,7 @@ p {
 }
 #challenges .thumbnail p {
     font-size: 1em;
-    padding: 0;
+    padding: 10px 0 0;
 }
 #challenges .heading {
     line-height: 1em;
