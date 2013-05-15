@@ -219,10 +219,14 @@ blockquote:before {
     padding-top: 50px;
 }
 .heading {
-    padding: 3px 0;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.5em;
+    padding: 5px 20px;
+    display: inline-block;
+}
+#challenges .heading {
+    display: block;
 }
 
 h4 {
