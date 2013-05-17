@@ -231,6 +231,16 @@ margin-bottom: 0 !important;
 
 }
 
+.bulletlist {
+list-style-type: square;
+font-size: 1.5em;
+padding: 0 20px;
+}
+
+.bulletlist li {
+padding: 10px 0;
+
+}
 
 #challenges .heading {
     display: block;
