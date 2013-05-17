@@ -225,6 +225,13 @@ blockquote:before {
     padding: 5px 20px;
     display: inline-block;
 }
+
+.skills {
+margin-bottom: 0 !important;
+
+}
+
+
 #challenges .heading {
     display: block;
 }
