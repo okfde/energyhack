@@ -299,7 +299,7 @@ p {
     line-height: 1.1em;
     margin-bottom: 50px;
 }
-#about {
+#about, #video {
     padding: 20px 0 0 0;
     margin-bottom: 50px;
 }
