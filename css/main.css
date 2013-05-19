@@ -349,6 +349,12 @@ footer li {
     width: 145px;
     min-height: 235px;
 }
+.thumbnail > a {
+    color: #3D3D3F;
+}
+.thumbnail > a:hover {
+    text-decoration: none;
+}
 
 /* ==========================================================================
    Media Queries
