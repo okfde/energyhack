@@ -18,8 +18,14 @@
         <link rel="stylesheet" href="css/night.css" title="night">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/styleswitcher.js"></script>
-        <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
-    </head>
+			  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+				<!--[if lte IE 8]>
+    			<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+				<![endif]-->
+
+			<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+    
+	</head>
     <body style="zoom: 1;" onLoad="initialize()">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
