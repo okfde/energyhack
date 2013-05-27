@@ -2,32 +2,40 @@
  * Map Code *
  ************/
 
+var map, building, toner;
+
 function initialize() {
-var osmbuildings = 'http://{s}.tiles.mapbox.com/v3/osmbuildings.map-c8zdox7m/{z}/{x}/{y}.png';
-var osmbuildings_attribution = 'Map tiles © <a href="http://mapbox.com">MapBox</a>, © <a href="http://osmbuildings.org">OSM Buildings</a>';
-var tonerlayer = 'http://tile.stamen.com/toner/{z}/{x}/{y}.png';
-var toner_attribution = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.';
-var osmdefault = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
-var osmdefault_attribution = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
+  var osmbuildings = 'http://{s}.tiles.mapbox.com/v3/osmbuildings.map-c8zdox7m/{z}/{x}/{y}.png';
+  var osmbuildings_attribution = 'Map tiles © <a href="http://mapbox.com">MapBox</a>, © <a href="http://osmbuildings.org">OSM Buildings</a>';
+  var tonerlayer = 'http://tile.stamen.com/toner/{z}/{x}/{y}.png';
+  var toner_attribution = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.';
+  // var osmdefault = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+  // var osmdefault_attribution = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
 
-var building   = L.tileLayer(osmbuildings, {styleId: 3, attribution: osmbuildings_attribution}),
-    defualt  = L.tileLayer(osmdefault, {styleId: 2,   attribution: osmdefault_attribution}),
-    toner = L.tileLayer(tonerlayer, {styleId: 1, attribution: toner_attribution});
+  building = L.tileLayer(osmbuildings, {styleId: 3, attribution: osmbuildings_attribution});
+      // defualt  = L.tileLayer(osmdefault, {styleId: 2,   attribution: osmdefault_attribution}),
+  toner = L.tileLayer(tonerlayer, {styleId: 1, attribution: toner_attribution});
 
-var map = L.map('map', {layers:[building, toner, defualt]}).setView([52.540403, 13.394625], 17);
+  map = L.map('map').setView([52.540403, 13.394625], 17);
 
-var baseMaps = {
-    "Schwarz & Weiß": toner,
-    "OSM Buldings": building,
-    "OSM Standard": defualt
-};
+  // var baseMaps = {
+  //     "Schwarz & Weiß": toner,
+  //     "OSM Buldings": building,
+  //     "OSM Standard": defualt
+  // };
+
+  if (getActiveStyleSheet() === 'day') {
+    map.addLayer(building);
+  } else {
+    map.addLayer(toner);
+  }
 
 
-L.control.layers(baseMaps, null).addTo(map);
+  // L.control.layers(baseMaps, null).addTo(map);
 
-L.marker([52.540403, 13.394625]).addTo(map)
-         .bindPopup('Supermarkt Berlin.')
-         .openPopup();
+  L.marker([52.540403, 13.394625]).addTo(map)
+           .bindPopup('Supermarkt Berlin.')
+           .openPopup();
 }
 
 /**********************************
@@ -42,6 +50,13 @@ function switchStyleSheet() {
     title = nightCSS;
   } else {
     title = dayCSS;
+  }
+  if (title === 'day') {
+    map.removeLayer(toner);
+    map.addLayer(building);
+  } else {
+    map.removeLayer(building);
+    map.addLayer(toner);
   }
   setActiveStyleSheet(title);
 }
