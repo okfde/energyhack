@@ -2,92 +2,40 @@
  * Map Code *
  ************/
 
-var supermarkt = new google.maps.LatLng(52.540403, 13.394625);
+var map, building, toner;
 
 function initialize() {
+  var osmbuildings = 'http://{s}.tiles.mapbox.com/v3/osmbuildings.map-c8zdox7m/{z}/{x}/{y}.png';
+  var osmbuildings_attribution = 'Map tiles © <a href="http://mapbox.com">MapBox</a>, © <a href="http://osmbuildings.org">OSM Buildings</a>';
+  var tonerlayer = 'http://tile.stamen.com/toner/{z}/{x}/{y}.png';
+  var toner_attribution = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.';
+  // var osmdefault = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+  // var osmdefault_attribution = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
 
-  var day = [{
-    "featureType": "road.arterial",
-    "elementType": "geometry.stroke",
-    "stylers": [{
-      "color": "#b4b4b4"
-    }]
-  }, {
-    "featureType": "road.arterial",
-    "elementType": "geometry.fill",
-    "stylers": [{
-      "color": "#ffffff"
-    }]
-  }, {
-    "featureType": "road.arterial",
-    "elementType": "labels.text.stroke",
-    "stylers": [{
-      "weight": 0
-    }, {
-      "color": "#808080"
-    }, {
-      "visibility": "off"
-    }]
-  }, {
-    "featureType": "road.arterial",
-    "elementType": "labels.text.fill",
-    "stylers": [{
-      "color": "#636363"
-    }]
-  }, {
-    "featureType": "poi.park",
-    "elementType": "geometry.fill",
-    "stylers": [{
-      "color": "#d8e3dd"
-    }]
-  }, {
-    "featureType": "poi.attraction",
-    "stylers": [{
-      "color": "#808080"
-    }, {
-      "visibility": "off"
-    }]
-  }, {
-    "featureType": "poi.sports_complex",
-    "stylers": [{
-      "color": "#808080"
-    }, {
-      "visibility": "off"
-    }]
-  }];
+  building = L.tileLayer(osmbuildings, {styleId: 3, attribution: osmbuildings_attribution});
+      // defualt  = L.tileLayer(osmdefault, {styleId: 2,   attribution: osmdefault_attribution}),
+  toner = L.tileLayer(tonerlayer, {styleId: 1, attribution: toner_attribution});
 
-  var night = day.concat([{
-    "stylers": [
-      { "invert_lightness": true }
-    ]
-  }]);
+  map = L.map('map').setView([52.540403, 13.394625], 17);
 
-  var styledMap = new google.maps.StyledMapType(
-    day, {name: "Energy Hack Map"});
+  // var baseMaps = {
+  //     "Schwarz & Weiß": toner,
+  //     "OSM Buldings": building,
+  //     "OSM Standard": defualt
+  // };
 
-  var mapOptions = {
-    zoom: 16,
-    center: supermarkt,
-    disableDefaultUI: true,
-    zoomControl: true,
-    scrollwheel: false,
-    mapTypeControlOptions: {
-       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-    }
-  };
-  var map = new google.maps.Map(
-    document.getElementById('map'),
-    mapOptions);
+  if (getActiveStyleSheet() === 'day') {
+    map.addLayer(building);
+  } else {
+    map.addLayer(toner);
+  }
 
-  var marker = new google.maps.Marker ({
-      position: supermarkt,
-      title: 'SUPERMARKT - Energy Hack',
-      map: map,
-      icon: 'img/google_marker.png'
-  });
 
-  map.mapTypes.set('map_style', styledMap);
-  map.setMapTypeId('map_style');
+  // L.control.layers(baseMaps, null).addTo(map);
+
+  L.marker([52.540403, 13.394625]).addTo(map)
+           .bindPopup('Supermarkt Berlin.')
+           .openPopup();
 }
 
 /**********************************
@@ -102,6 +50,13 @@ function switchStyleSheet() {
     title = nightCSS;
   } else {
     title = dayCSS;
+  }
+  if (title === 'day') {
+    map.removeLayer(toner);
+    map.addLayer(building);
+  } else {
+    map.removeLayer(building);
+    map.addLayer(toner);
   }
   setActiveStyleSheet(title);
 }
