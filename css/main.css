@@ -253,10 +253,37 @@ h4 {
     font-size: 1.5em;
     line-height: 1em;
 }
+
+h5 {
+    padding: 0;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 1em 0 0.5em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
 p {
     padding: 0 20px 20px 20px;
     font-size: 1.5em;
 }
+
+.contact-area {
+    margin-top: 2em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+.contact-area a {
+    color: #fff;
+}
+
+.contact-area p {
+    padding: 0;
+}
+
 .spaceless {
     margin: 0;
 }
