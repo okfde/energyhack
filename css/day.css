@@ -20,6 +20,10 @@ body {
     background: #FFEC00;
     color: #3D3D3F;
 }
+.color4{
+    background: #FFFFFF;
+    color: #FFFFFF;
+}
 
 .clock {
     width: 19px;
