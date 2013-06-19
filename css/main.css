@@ -231,6 +231,11 @@ margin-bottom: 0 !important;
 
 }
 
+.review {
+margin-bottom: 50px !important;
+
+}
+
 .bulletlist {
 list-style-type: square;
 font-size: 1.5em;
