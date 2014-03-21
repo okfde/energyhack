@@ -5,14 +5,14 @@
 var map, building, toner;
 
 function initialize() {
-  var osmbuildings = 'http://{s}.tiles.mapbox.com/v3/osmbuildings.map-c8zdox7m/{z}/{x}/{y}.png';
-  var osmbuildings_attribution = 'Map tiles © <a href="http://mapbox.com">MapBox</a>, © <a href="http://osmbuildings.org">OSM Buildings</a>';
+  // var osmbuildings = 'http://{s}.tiles.mapbox.com/v3/osmbuildings.map-c8zdox7m/{z}/{x}/{y}.png';
+  // var osmbuildings_attribution = 'Map tiles © <a href="http://mapbox.com">MapBox</a>, © <a href="http://osmbuildings.org">OSM Buildings</a>';
   var tonerlayer = 'http://tile.stamen.com/toner/{z}/{x}/{y}.png';
   var toner_attribution = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.';
   // var osmdefault = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
   // var osmdefault_attribution = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
 
-  building = L.tileLayer(osmbuildings, {styleId: 3, attribution: osmbuildings_attribution});
+  // building = L.tileLayer(osmbuildings, {styleId: 3, attribution: osmbuildings_attribution});
       // defualt  = L.tileLayer(osmdefault, {styleId: 2,   attribution: osmdefault_attribution}),
   toner = L.tileLayer(tonerlayer, {styleId: 1, attribution: toner_attribution});
 
@@ -24,11 +24,11 @@ function initialize() {
   //     "OSM Standard": defualt
   // };
 
-  if (getActiveStyleSheet() === 'day') {
-    map.addLayer(building);
-  } else {
-    map.addLayer(toner);
-  }
+  // if (getActiveStyleSheet() === 'day') {
+  //   map.addLayer(building);
+  // } else {
+  map.addLayer(toner);
+  // }
 
 
   // L.control.layers(baseMaps, null).addTo(map);
