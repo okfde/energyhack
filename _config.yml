@@ -4,7 +4,7 @@ permalink: none
 
 # Template Variables
 title: 'EnergyHack Berlin'
-github: 'https://github.com/okfde/energyhack'
+github_url: 'https://github.com/okfde/energyhack'
 twitter: '#'
 contact: 'julia.kloiber@okfn.org'
 
