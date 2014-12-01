@@ -51,6 +51,8 @@ function switchStyleSheet() {
   } else {
     title = dayCSS;
   }
+
+  /* Preventing styleswitch: Uncaught TypeError: Cannot read property '_leaflet_id' of undefined
   if (title === 'day') {
     map.removeLayer(toner);
     map.addLayer(building);
@@ -58,6 +60,8 @@ function switchStyleSheet() {
     map.removeLayer(building);
     map.addLayer(toner);
   }
+  */
+
   setActiveStyleSheet(title);
 }
 

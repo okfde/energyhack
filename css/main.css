@@ -231,11 +231,6 @@ margin-bottom: 0 !important;
 
 }
 
-.review {
-margin-bottom: 50px	 !important;
-
-}
-
 .bulletlist {
 list-style-type: square;
 font-size: 1.5em;
@@ -331,7 +326,7 @@ p {
     line-height: 1.1em;
     margin-bottom: 50px;
 }
-#about, #video {
+#about, #video, .review {
     padding: 20px 0 0 0;
     margin-bottom: 50px;
 }
