@@ -1,0 +1,114 @@
+/*
+ * Light Design
+ */
+
+body {
+    background-image: url('../img/EH_day.jpg');
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+.color1 {
+    background: #3D3D3F;
+    color: #FFF;
+}
+.color2 {
+    background: #00C786;
+    color: #FFF;
+}
+.color3{
+    background: #FFEC00;
+    color: #3D3D3F;
+}
+.color4{
+    background: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.clock {
+    width: 19px;
+    height: 19px;
+    background:none no-repeat left center;
+    background-image: url('../img/uhr_day_sprite.png');
+    background-position: 0 0;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.color2shade1 {
+    background: #06ba80;
+    color: #FFF;
+    background-position: 0 0;
+}
+.color2shade1 .clock {
+    background-position: 0 -19px;
+}
+
+.color2shade2 {
+    background: #0bae79;
+    color: #FFF;
+}
+.color2shade2 .clock {
+    background-position: 0 -38px;
+}
+.color2shade3 {
+    background: #10a373;
+    color: #FFF;
+}
+.color2shade3 .clock {
+    background-position: 0 -57px;
+}
+.color2shade4 {
+    background: #14996e;
+    color: #FFF;
+}
+.color2shade4 .clock {
+    background-position: 0 -76px;
+}
+.color2shade5 {
+    background: #189069;
+    color: #FFF;
+}
+.color2shade5 .clock {
+    background-position: 0 -95px;
+}
+
+.social-media li a {
+    background: #FFEC00;
+    color: #3D3D3F;
+}
+.social-media li a:hover {
+    background: #3D3D3F;
+    color: #FFEC00;
+}
+#teaser h2 {
+    color: #FFEC00;
+}
+#register a {
+    background: #3D3D3F;
+    color: #FFF;
+}
+#register a:hover {
+    background: #3D3D3F;
+    color: #FFEC00;
+}
+#about a {
+    color: #FFEC00;
+}
+#about a:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+footer li a {
+    color: #fff;
+}
+footer li a:hover {
+    color: #FFEC00;
+    text-decoration: none;
+}
+#switch {
+    background: url("../img/onoff_sprite.png") no-repeat scroll 0 0 transparent;
+}
+#switch:active {
+    background-position: 0 -50px;
+}

@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jan Brennenstuhl -- Developer -- @jbspeakr
+    Julia Kloiber -- Organizer -- @j_kloiber
+    Anna -- Designer -- @
+
+# THANKS
+
+    Supporter: Open Knowledge Foundation Deutschland e.V.
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
