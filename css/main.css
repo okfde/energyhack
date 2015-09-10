@@ -173,6 +173,44 @@ body {
     background-color: black;
 }
 
+@-webkit-keyframes box-light-animation {
+    0%     {background-color:black; border-color: rgb(51, 51, 51);}
+    100.0%  {background-color:#FFEC00; border-color: white;}
+}
+
+@keyframes box-light-animation {
+    0%     {background-color:black; border-color: rgb(51, 51, 51);}
+    100.0%  {background-color:#FFEC00; border-color: white;}
+}
+
+.box-dark {
+    background-color: black;
+    border-color: black;
+    color: #FFEC00;
+
+    -webkit-animation-name: box-dark-animation;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+    
+    animation-name: box-dark-animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+}
+
+.box-dark-start {
+    background-color: black;
+}
+
+@-webkit-keyframes box-dark-animation {
+    0%     {color:rgb(51, 51, 51); border-color: rgb(51, 51, 51);}
+    100.0%  {color:#FFEC00; border-color: black;}
+}
+
+@keyframes box-dark-animation {
+    0%     {color:rgb(51, 51, 51); border-color: rgb(51, 51, 51);}
+    100.0%  {color:#FFEC00; border-color: black;}
 }
 ul {
     list-style: none;
@@ -448,10 +486,33 @@ footer li {
     text-decoration: none;
 }
 
+.thumbnail img {
+    opacity: 1.0;
+    -webkit-animation-name: thumbnail-image-animation;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+    
+    animation-name: thumbnail-image-animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+}
 
 .thumbnail {
     background-color: black;
 }
+
+@-webkit-keyframes thumbnail-image-animation {
+    0%     {opacity:0.2;}
+    100.0%  {opacity:1.0;}
+}
+
+@keyframes thumbnail-image-animation {
+    0%     {opacity:0.2;}
+    100.0%  {opacity:1.0;}
+}
+
 .leaflet-popup-content {
     color: black;
 }
