@@ -18,8 +18,12 @@ textarea {
     color: #222;
 }
 
+p {
+    margin: 1em;
+}
+
 body {
-    font-size: 1em;
+    font-size: 1.5em;
     line-height: 1.4;
 }
 
@@ -212,6 +216,15 @@ body {
     0%     {color:rgb(51, 51, 51); border-color: rgb(51, 51, 51);}
     100.0%  {color:#FFEC00; border-color: black;}
 }
+
+.challenge-text {
+    padding-right : 0;
+}
+
+.challenge-number {
+    padding-left: 0;
+}
+
 ul {
     list-style: none;
 }
@@ -310,19 +323,17 @@ blockquote:before {
 }
 
 .skills {
-margin-bottom: 0 !important;
-
+    margin-bottom: 0 !important;
 }
 
 .bulletlist {
-list-style-type: square;
-font-size: 1.5em;
-padding: 0 20px;
+    list-style-type: square;
+    font-size: 1.5em;
+    padding: 0 20px;
 }
 
 .bulletlist li {
-padding: 10px 0;
-
+    padding: 10px 0;
 }
 
 #challenges .heading {
