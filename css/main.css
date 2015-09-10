@@ -427,21 +427,31 @@ footer li {
     width: 88px;
     border: none;
 }
+
 .js-hidden {
     display: none;
 }
+
 #schedule .span2 {
     margin: 0;
     width: 145px;
     min-height: 235px;
 }
+
 .thumbnail > a {
     color: #3D3D3F;
+    background-color: black;
+    display: inline-block;
 }
+
 .thumbnail > a:hover {
     text-decoration: none;
 }
 
+
+.thumbnail {
+    background-color: black;
+}
 .leaflet-popup-content {
     color: black;
 }
@@ -455,15 +465,19 @@ footer li {
 	#teaser h1 {
         font-size: 7em;
     }
+
     #teaser h2 {
         font-size: 3em;
     }
+
     #teaser h3 {
         font-size: 5em;
     }
+
     #schedule p {
         font-size: 1em;
     }
+
     #schedule .span2 {
         margin: 0;
         width: 120px;
@@ -473,25 +487,32 @@ footer li {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+    
     #teaser h1 {
         font-size: 6em;
     }
+
     #teaser h1 span.lightning{
         background-image: none;
         padding-left: 0;
     }
+
     #teaser h2 {
         font-size: 2em;
     }
+
     #teaser h3 {
         font-size: 3em;
     }
+
     #register a {
         font-size: 4em;
     }
+
     footer .span2 img {
         padding: 20px;
     }
+
     #schedule .span2 {
         margin: 0;
         width: 100%;
@@ -507,6 +528,7 @@ footer li {
     font-family: Arial,sans-serif;
     font-size: 6em;
 }
+
 .lt-ie9 #schedule .span2 {
     font-family: Arial,sans-serif;
     font-size: 0.6em;
@@ -537,6 +559,7 @@ footer li {
   width: 100%;
   height: 100%;
 }
+
 @media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
   .flex-video { padding-top: 0; }
 }
