@@ -1,11 +1,50 @@
 /*
  * Light Design
  */
+/*html {
+    height: 100%;
+}*/
 
 body {
-    background-image: url('../img/EH_night.jpg');
+    /*background-image: url('../img/EH_night.jpg');*/
+    background-image: url('../img/bg_night.png');
+    background-color: black;
     background-repeat: repeat;
     background-position: top left;
+    height:100%;
+}
+
+.bg {
+    background-image: url('../img/bg_day.png');
+    background-color: black;
+    -webkit-animation-name: animate-background;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+    
+    animation-name: animate-background;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 100vh;
+
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+@-webkit-keyframes animate-background {
+    0%      {opacity: 0;}
+    100.0%  {opacity: 1;}
+}
+
+@keyframes animate-background {
+    0%      {opacity: 0;}
+    100.0%  {opacity: 1;}
 }
 
 .color1 {

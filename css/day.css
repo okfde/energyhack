@@ -3,7 +3,9 @@
  */
 
 body {
-    background-image: url('../img/EH_day.jpg');
+    /*background-image: url('../img/EH_day.jpg');*/
+    background-image: url('../img/bg_day.png');
+    /*background-color: white;*/
     background-repeat: repeat;
     background-position: top left;
 }
