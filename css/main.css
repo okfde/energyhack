@@ -545,6 +545,20 @@ a:hover {
     background-color: black;
 }
 
+.prize-thumbnail {
+    background-color: green;
+    height: 6em;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prize-thumbnail p {
+    padding: 0 10px;
+}
+
 @-webkit-keyframes thumbnail-image-animation {
     0%     {opacity:0.2;}
     100.0%  {opacity:1.0;}
