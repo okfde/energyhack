@@ -49,6 +49,10 @@ footer a, footer a:hover, footer a:visited, footer a:active {
     border: none;
 }
 
+footer p {
+    padding: 0;
+}
+
 footer a:visited {
     text-decoration: none;
 }
