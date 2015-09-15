@@ -7,8 +7,8 @@ var map, building, toner;
 function initialize() {
   // var osmbuildings = 'http://{s}.tiles.mapbox.com/v3/osmbuildings.map-c8zdox7m/{z}/{x}/{y}.png';
   // var osmbuildings_attribution = 'Map tiles © <a href="http://mapbox.com">MapBox</a>, © <a href="http://osmbuildings.org">OSM Buildings</a>';
-  var tonerlayer = 'http://tile.stamen.com/toner/{z}/{x}/{y}.png';
-  var toner_attribution = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.';
+  var tonerlayer = 'http://a.tiles.mapbox.com/v3/gollora.map-5gvzlfvz/{z}/{x}/{y}.png';
+  var toner_attribution = '<a href=\"https:\/\/www.mapbox.com\/about\/maps\/\" target=\"_blank\">&copy; Mapbox<\/a> <a href=\"http:\/\/www.openstreetmap.org\/about\/\" target=\"_blank\">&copy; OpenStreetMap<\/a> <a class=\"mapbox-improve-map\" href=\"https:\/\/www.mapbox.com\/map-feedback\/\" target=\"_blank\">Improve this map<\/a>';
   // var osmdefault = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
   // var osmdefault_attribution = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
 
