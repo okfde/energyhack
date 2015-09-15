@@ -355,6 +355,7 @@ section.row > .row {
     color: #3D3D3F;
     text-decoration: none;
     text-transform: uppercase;
+    border: none;
 }
 .social-media li a:hover {
     text-decoration: none;
