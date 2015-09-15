@@ -134,6 +134,10 @@ a:hover {
     text-decoration: none;
 }
 
+.button a:visited, .button a:focus, .button a:active, .button a:link {
+    text-decoration: none;
+}
+
 
 .container {
     position: relative;
@@ -211,6 +215,23 @@ section.row > .row {
 
 .box-light li {
     padding-left: 20px;
+}
+
+.button h1{
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background-color: #787878;
+    border-color: #787878;
+}
+
+.registration {
+    color: black;
+    text-shadow:  1px  1px 1px #FFEC00,
+                  1px -1px 1px #FFEC00,
+                 -1px  1px 1px #FFEC00,
+                 -1px -1px 1px #FFEC00;
 }
 
 .itemization {
