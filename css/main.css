@@ -190,6 +190,7 @@ section.row > .row {
     background-color: #FFEC00;
     border-color: white;
     padding-top: 10px;
+    padding-bottom: 10px;
 
    /* -webkit-animation-name: box-light-lightning;
     -webkit-animation-duration: 5s;
