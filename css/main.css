@@ -51,7 +51,7 @@ footer p {
     padding: 0;
 }
 
-footer a:visited {
+footer a:visited, footer a:focus {
     text-decoration: none;
 }
 
