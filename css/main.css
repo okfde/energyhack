@@ -86,9 +86,10 @@ footer li {
 }
 
 footer img {
-    height: 4em;
+    max-height: 4em;
     vertical-align: center;
     margin-right: 20px;
+    max-width: 100%;
 }
 
 h1 {
@@ -126,6 +127,15 @@ ul {
 a {
     color: #11110F;
     border-bottom: 2px solid #FFF;
+   
+    -ms-word-break: break-all;
+    word-break: break-all;
+    /* Non standard for webkit */
+    word-break: break-word;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
 }
 
 a:hover {
@@ -145,7 +155,7 @@ a:hover {
     font-size: 22px;
 }
 
-section.row > .row {
+.container > .row {
     margin-bottom: 50px;
 }
 .box {
@@ -198,7 +208,7 @@ section.row > .row {
     padding-top: 10px;
     padding-bottom: 10px;
 
-   /* -webkit-animation-name: box-light-lightning;
+    -webkit-animation-name: box-light-lightning;
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-play-state: running;
@@ -206,7 +216,7 @@ section.row > .row {
     animation-name: box-light-lightning;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
-    animation-play-state: running;*/
+    animation-play-state: running;
 }
 
 .box-content h2, .box-content ul, .box-content h1 , .box-content h3, .box-content h4 {
@@ -243,6 +253,11 @@ section.row > .row {
 
 .itemization li:before{
     content:"- ";
+}
+
+.nopadding {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .box-light-start {
@@ -298,7 +313,7 @@ section.row > .row {
     border-color: black;
     color: #FFEC00;
 
-    -webkit-animation-name: box-dark-animation;
+    /*-webkit-animation-name: box-dark-animation;
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-play-state: running;
@@ -306,7 +321,7 @@ section.row > .row {
     animation-name: box-dark-animation;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
-    animation-play-state: running;
+    animation-play-state: running;*/
 }
 
 .box-dark-start {

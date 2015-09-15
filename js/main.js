@@ -17,6 +17,7 @@ function initialize() {
   toner = L.tileLayer(tonerlayer, {styleId: 1, attribution: toner_attribution});
 
   map = L.map('map').setView([52.540403, 13.394625], 17);
+  map.dragging.disable();
 
   // var baseMaps = {
   //     "Schwarz & Weiß": toner,
