@@ -331,6 +331,10 @@ section.row > .row {
     padding-left: 0;
 }
 
+.challenge-row {
+    margin-bottom: 50px;
+}
+
 .img-header {
     width: 100%;
 }
