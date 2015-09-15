@@ -151,6 +151,11 @@ section.row > .row {
     margin: 5px;
 }
 
+.box-schedule {
+    height: 8em;
+    padding-top: 10px;
+}
+
 .box-header-left {
     border-bottom: none;
     /*border-right: none;*/
