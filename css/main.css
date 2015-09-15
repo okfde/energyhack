@@ -157,6 +157,16 @@ a:hover {
     padding-bottom: 10px;
 }
 
+.box-header {
+    border-bottom: none;
+    /*border-right: none;*/
+    float: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
 .box-header-right {
     border-bottom: none;
     display: inline-block;
@@ -172,7 +182,7 @@ a:hover {
     border-color: white;
     padding-top: 10px;
 
-    /*-webkit-animation-name: box-light-lightning;
+   /* -webkit-animation-name: box-light-lightning;
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-play-state: running;
@@ -288,7 +298,9 @@ a:hover {
     padding-left: 0;
 }
 
-
+.img-header {
+    width: 100%;
+}
 
 #quotes .row-fluid:first-child {
     margin-bottom: 20px;
