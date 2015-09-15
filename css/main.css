@@ -66,9 +66,8 @@ footer > .row {
 }
 
 footer .border {
-    border: 2px solid black;
+    border: 5px solid black;
     border-bottom: none;
-    margin-bottom: 10px;
     padding-top: 5px;
     margin-top: 0;
     margin-right: 0;
@@ -76,7 +75,7 @@ footer .border {
 }
 
 footer .column-border {
-    border-right: 2px solid black;
+    border-right: 5px solid black;
 }
 
 footer li {
@@ -182,6 +181,10 @@ a:hover {
     padding-bottom: 10px;
 }
 
+.box-header h1 {
+    font-size: 30px;;
+}
+
 .box-header {
     border-bottom: none;
     /*border-right: none;*/
@@ -194,6 +197,7 @@ a:hover {
 
 .box-header-right {
     border-bottom: none;
+    border-left:none;
     display: inline-block;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -598,13 +602,23 @@ a:hover {
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
     
+    #register {
+        font-size: 35px;
     }
 
+    .styleswitch {
+        visibility: hidden;
     }
 
+    .social-media li a {
+        padding: 2px 10px;
     }
 
+    .container {
+        max-width: 98%;
     }
 
+    footer .column-border {
+    border-bottom: 5px solid black;
 }
 }
