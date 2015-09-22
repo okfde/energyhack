@@ -35,6 +35,15 @@
 html {
     background-color: black;
     background-image: url('../img/bg_night.png');
+    -webkit-animation-name: animate-background-html;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+    
+    animation-name: animate-background-html;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
 }
 
 body {
@@ -63,6 +72,17 @@ body {
 @keyframes animate-background {
     0%      {opacity: 0;}
     100.0%  {opacity: 1;}
+}
+
+@-webkit-keyframes animate-background-html {
+    0%      {opacity: 0;}
+    100.0%  {opacity: 1;}
+}
+
+@keyframes animate-background-html {
+    0%      {background-color: black;}
+    10.0%   {background-color: white;}
+    20.0%   {background-color: black;}
 }
 
 footer {
