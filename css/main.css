@@ -170,6 +170,7 @@ a:hover {
 .box-schedule {
     height: 8em;
     padding-top: 10px;
+    border-left: 3px solid white;
 }
 
 .box-header-left {
@@ -228,6 +229,10 @@ a:hover {
     padding-left: 20px;
 }
 
+.box-content .thumbnail-list li {
+    padding-left:0;
+}
+
 .box-light li {
     padding-left: 20px;
 }
@@ -261,8 +266,7 @@ a:hover {
 }
 
 .nopadding {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
 }
 
 .box-light-start {
@@ -541,18 +545,12 @@ a:hover {
     min-height: 235px;
 }
 
-.thumbnail > a {
-    color: #3D3D3F;
-    background-color: black;
-    display: inline-block;
-}
-
-.thumbnail > a:hover {
-    text-decoration: none;
-}
-
-.thumbnail img {
+.thumbnail {
     opacity: 1.0;
+    width: 100%;
+    max-height: 300px;
+    padding: 0;
+    object-fit: cover;
     -webkit-animation-name: thumbnail-image-animation;
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
@@ -562,10 +560,6 @@ a:hover {
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
     animation-play-state: running;
-}
-
-.thumbnail {
-    background-color: black;
 }
 
 .prize-thumbnail {
