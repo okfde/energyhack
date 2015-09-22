@@ -32,10 +32,37 @@
 
 }
 
+html {
+    background-color: black;
+    background-image: url('../img/bg_night.png');
+}
+
 body {
+    background-repeat: repeat;
+    background-position: top left;
+    height:100%;
     padding-top: 50px;
     font-family: 'misoregular', sans-serif;
-    background-image: url('../img/bg_night.png');
+    background-image: url('../img/bg_day.png');
+    -webkit-animation-name: animate-background;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+    
+    animation-name: animate-background;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+}
+
+@-webkit-keyframes animate-background {
+    0%      {opacity: 0;}
+    100.0%  {opacity: 1;}
+}
+
+@keyframes animate-background {
+    0%      {opacity: 0;}
+    100.0%  {opacity: 1;}
 }
 
 footer {

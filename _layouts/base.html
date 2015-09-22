@@ -26,35 +26,36 @@
 
 	</head>
     <body onLoad="initialize()">
-        <div class="bg"></div>
+        <!-- <div class="bg"> -->
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        <div class="container">
-           <!--  <div class="row"> -->
-                <header class="row social-media">
-                    <ul>
-                        <li>
-                            <a href="https://twitter.com/EnergyHackB">Twitter</a>
-                        </li>
-                        <li>
-                            <a href="{{ site.github_url }}">GitHub</a>
-                        </li>
-                        <li>
-                            <a href="2013">2013</a>
-                        </li>
-                    </ul>
-                </header>
-            <!-- </div> -->    
-            {{ content }}
-           
-            {% include footer.html %}    
-                
-            <button onClick="switchStyleSheet()" id="switch" class="styleswitch"></button>
+            <div class="container">
+               <!--  <div class="row"> -->
+                    <header class="row social-media">
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/EnergyHackB">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="{{ site.github_url }}">GitHub</a>
+                            </li>
+                            <li>
+                                <a href="2013">2013</a>
+                            </li>
+                        </ul>
+                    </header>
+                <!-- </div> -->    
+                {{ content }}
+               
+                {% include footer.html %}    
+                    
+                <button onClick="switchStyleSheet()" id="switch" class="styleswitch"></button>
 
-        </div>
-            
-        </div>
+            </div>
+                
+        <!-- </div> -->
+
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
