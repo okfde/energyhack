@@ -35,6 +35,7 @@
 body {
     padding-top: 50px;
     font-family: 'misoregular', sans-serif;
+    background-image: url('../img/bg_night.png');
 }
 
 footer {
