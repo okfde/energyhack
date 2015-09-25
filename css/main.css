@@ -213,7 +213,7 @@ a:hover {
 .container {
     position: relative;
 	max-width: 90%;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 .container > .row {
