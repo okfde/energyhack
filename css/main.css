@@ -193,6 +193,10 @@ a {
     hyphens: none;
 }
 
+img {
+    max-width: 100%;;
+}
+
 a:hover {
     color: #FFF;
     border-bottom: 2px solid #FFF;
