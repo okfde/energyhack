@@ -569,6 +569,10 @@ a:hover {
     margin: 0;
 }
 
+#register:after{
+    content: "\2014> Jetzt anmelden <\2014";
+}
+
 #register a {
     text-align: center;
     text-decoration: none;
@@ -706,6 +710,20 @@ a:hover {
     }
 }
 
+@media (max-width: 1050px) {
+    #register:after{
+        content: "Jetzt anmelden";
+    }
+}
+
+@media (max-width: 418px) {
+    #register:after{
+        font-size: 70px;
+    }
+}
+
+
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -714,7 +732,7 @@ a:hover {
 @media (max-width: 767px) {
     
     #register {
-        font-size: 35px;
+        /*font-size: 35px;*/
     }
 
     .styleswitch {
@@ -730,6 +748,6 @@ a:hover {
     }
 
     footer .column-border {
-    border-bottom: 5px solid black;
-}
+        border-bottom: 5px solid black;
+    }
 }
