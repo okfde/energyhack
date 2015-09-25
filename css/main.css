@@ -33,6 +33,12 @@
 }
 
 html {
+    
+}
+
+body {
+    height:100%;
+    font-family: 'misoregular', sans-serif;
     background-color: black;
     background-image: url('../img/bg_night.png');
     -webkit-animation-name: animate-background-html;
@@ -46,13 +52,14 @@ html {
     animation-play-state: running;
 }
 
-body {
-    background-repeat: repeat;
-    background-position: top left;
-    height:100%;
-    padding-top: 50px;
-    font-family: 'misoregular', sans-serif;
+.bg {
+    position: absolute;
+    top: 0;
+    left:0;
     background-image: url('../img/bg_day.png');
+    height: 100000px;
+    width: 100%;
+
     -webkit-animation-name: animate-background;
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
@@ -75,8 +82,9 @@ body {
 }
 
 @-webkit-keyframes animate-background-html {
-    0%      {opacity: 0;}
-    100.0%  {opacity: 1;}
+    0%      {background-color: black;}
+    10.0%   {background-color: white;}
+    20.0%   {background-color: black;}
 }
 
 @keyframes animate-background-html {
@@ -193,6 +201,12 @@ a:hover {
 
 .button a:visited, .button a:focus, .button a:active, .button a:link {
     text-decoration: none;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
 }
 
 
