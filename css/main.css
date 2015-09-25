@@ -502,6 +502,21 @@ a:hover {
     display: inline-block;
 }
 
+.thumbnail {
+    margin-bottom: 0;
+}
+
+.thumbnail-list figure {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.thumbnail-list figcaption {
+    font-size: 18px;
+}
+
+
+
 .skills {
     margin-bottom: 0 !important;
 }
@@ -606,10 +621,15 @@ a:hover {
     min-height: 235px;
 }
 
+.thumbnail-list li {
+    float: left;
+    margin-right: 10px;
+}
+
 .thumbnail {
     opacity: 1.0;
-    width: 100%;
-    max-height: 300px;
+    width: 200px;
+    height: 150px;
     padding: 0;
     object-fit: cover;
     -webkit-animation-name: thumbnail-image-animation;
