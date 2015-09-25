@@ -362,7 +362,7 @@ a:hover {
     0%      {background-color:black; border-color: rgb(51, 51, 51);}
     29%     {background-color:black; border-color: rgb(51, 51, 51);}
     30%     {background-color:white; border-color: white;}
-    35%     {background-color:rgb(190,145, 49); border-color: black;}
+    35%     {background-color:black; border-color: black;}
     100.0%  {background-color:#FFEC00; border-color: white;}
 }
 
@@ -370,7 +370,7 @@ a:hover {
     0%      {background-color:black; border-color: rgb(51, 51, 51);}
     29%     {background-color:black; border-color: rgb(51, 51, 51);}
     30%     {background-color:white; border-color: white;}
-    35%     {background-color:rgb(190,145, 49); border-color: black;}
+    35%     {background-color:black; border-color: black;}
     100.0%  {background-color:#FFEC00; border-color: white;}
 }
 
