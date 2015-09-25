@@ -693,6 +693,19 @@ a:hover {
     color: black;
 }
 
+@media (max-width: 991px) {
+    .box-schedule {
+        border-left: none;
+        border-top: 3px solid white;
+        height: 4em;
+        text-align: center;
+    }
+
+    .box-schedule-first {
+        border: none;
+    }
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
