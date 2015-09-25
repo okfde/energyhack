@@ -303,8 +303,9 @@ a:hover {
 }
 
 .button:hover {
-    background-color: #787878;
-    border-color: #787878;
+    
+    border: 3px solid white;
+    color: #FFEC00;
 }
 
 .registration {
@@ -313,6 +314,15 @@ a:hover {
                   1px -1px 1px #FFEC00,
                  -1px  1px 1px #FFEC00,
                  -1px -1px 1px #FFEC00;
+    font-size: 100px;
+}
+
+.registration:hover {
+    color: #FFEC00;
+    text-shadow:  1px  1px 1px black,
+                  1px -1px 1px black,
+                 -1px  1px 1px black,
+                 -1px -1px 1px black;
 }
 
 .itemization {
@@ -591,6 +601,14 @@ a:hover {
 #schedule p {
     padding: 20px 5px;
     font-size: 1.5em;
+}
+
+.signup {
+    margin: 20px 0;
+}
+
+.signup .button:hover {
+    background-color: black;
 }
 
 
