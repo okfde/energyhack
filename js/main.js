@@ -16,8 +16,9 @@ function initialize() {
       // defualt  = L.tileLayer(osmdefault, {styleId: 2,   attribution: osmdefault_attribution}),
   toner = L.tileLayer(tonerlayer, {styleId: 1, attribution: toner_attribution});
 
-  map = L.map('map').setView([52.50011, 13.39147], 17);
-  map.dragging.disable();
+  map = L.map('map', {
+    scrollWheelZoom: false
+  }).setView([52.50011, 13.39147], 17);
 
   // var baseMaps = {
   //     "Schwarz & Weiß": toner,
