@@ -219,6 +219,14 @@ a:hover {
 .container > .row {
     margin-bottom: 50px;
 }
+
+.challenge-wrapper, .challenge-wrapper .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
 .box {
     border: 3px solid rgb(51, 51, 51);
 }
@@ -284,6 +292,11 @@ a:hover {
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
     animation-play-state: running;
+}
+
+.challenge-content {
+    flex: 1;
+    -webkit-flex: 1;
 }
 
 .box-content h2, .box-content ul, .box-content h1 , .box-content h3, .box-content h4 {
@@ -435,6 +448,12 @@ a:hover {
 
 .challenge-row {
     margin-bottom: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
 }
 
 .img-header {
@@ -764,5 +783,11 @@ a:hover {
 
     footer .column-border {
         border-bottom: 5px solid black;
+    }
+}
+
+@media (max-width: 991px) {
+    .challenge-wrapper {
+        display: block;
     }
 }
