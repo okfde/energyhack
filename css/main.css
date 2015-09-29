@@ -193,10 +193,6 @@ a {
     hyphens: none;
 }
 
-img {
-    max-width: 100%;;
-}
-
 a:hover {
     color: #FFF;
     border-bottom: 2px solid #FFF;
@@ -346,6 +342,13 @@ a:hover {
 
 .box-light-start {
     background-color: black;
+}
+
+.workshop img {
+    display: block; 
+    margin-bottom:10px;
+    padding: 0 15px;
+    width:100%
 }
 
 @-webkit-keyframes box-light-slow {
