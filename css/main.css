@@ -141,10 +141,10 @@ footer li {
 }
 
 footer img {
-    max-height: 4em;
-    vertical-align: center;
+    
+    vertical-align: middle;
     margin-right: 20px;
-    max-width: 100%;
+    height: 3.5em;
 }
 
 h1 {
@@ -571,6 +571,14 @@ a:hover {
 
 .spaceless {
     margin: 0;
+}
+
+.logo-snb {
+    height: 3em;
+}
+
+.logo-senwtf {
+    height: 2em;
 }
 
 #register:after{
