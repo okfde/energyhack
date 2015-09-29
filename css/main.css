@@ -520,6 +520,10 @@ a:hover {
     margin-bottom: 0;
 }
 
+.oculus-rift {
+    object-position: 0 0;
+}
+
 .thumbnail-list figure {
     width: 200px;
     margin-bottom: 20px;
