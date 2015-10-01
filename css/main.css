@@ -98,7 +98,7 @@ footer {
     margin-left: -30px !important;*/
 }
 
-footer a, footer a:hover, footer a:visited, footer a:active {
+footer a, footer a:hover, footer a:visited, footer a:active, footer a:focus {
     color: grey;
     border: none;
 }
