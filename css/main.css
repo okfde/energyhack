@@ -603,6 +603,14 @@ a:hover {
     height: 2.3em;
 }
 
+.logo-smartb {
+    height: 2.3em;
+}
+
+.logo-kki {
+    height: 6em;
+}
+
 #register:after{
     content: "\2014> Jetzt anmelden <\2014";
 }
