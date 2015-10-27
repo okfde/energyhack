@@ -600,15 +600,19 @@ a:hover {
 }
 
 .logo-senwtf {
-    height: 2.3em;
+    height: 1.3em;
 }
 
 .logo-smartb {
-    height: 2.3em;
+    height: 1.3em;
 }
 
 .logo-kki {
-    height: 6em;
+    height: 4em;
+}
+
+.logo-cardboard {
+    height: 2em;
 }
 
 #register:after{
