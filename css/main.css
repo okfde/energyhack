@@ -615,6 +615,10 @@ a:hover {
     height: 2em;
 }
 
+.logo-tacitDimension {
+    height: 1.3em;
+}
+
 #register:after{
     content: "\2014> Jetzt anmelden <\2014";
 }
