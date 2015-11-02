@@ -124,7 +124,6 @@ footer > .row {
 footer .border {
     border: 5px solid black;
     border-bottom: none;
-    padding-top: 5px;
     margin-top: 0;
     margin-right: 0;
     margin-left: 0;
@@ -240,6 +239,19 @@ a:hover {
     height: 8em;
     padding-top: 10px;
     border-left: 3px solid white;
+}
+
+.data-boxes .box-schedule {
+    border-bottom: 3px solid white;
+}
+
+.box-schedule-first {
+    border-left: none;
+}
+
+.data-content {
+    margin-top: 10px;
+    margin-left: 15px;
 }
 
 .box-header-left {
