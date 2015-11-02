@@ -619,6 +619,10 @@ a:hover {
     height: 1.3em;
 }
 
+.logo-tsb {
+    height: 2.3em;
+}
+
 #register:after{
     content: "\2014> Jetzt anmelden <\2014";
 }
