@@ -32,10 +32,6 @@
 
 }
 
-html {
-    
-}
-
 body {
     height:100%;
     font-family: 'misoregular', sans-serif;
@@ -45,7 +41,7 @@ body {
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-play-state: running;
-    
+
     animation-name: animate-background-html;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -64,7 +60,7 @@ body {
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-play-state: running;
-    
+
     animation-name: animate-background;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -140,7 +136,7 @@ footer li {
 }
 
 footer img {
-    
+
     vertical-align: middle;
     margin-right: 20px;
     height: 3.5em;
@@ -181,7 +177,7 @@ ul {
 a {
     color: #11110F;
     border-bottom: 2px solid #FFF;
-   
+
     -ms-word-break: break-all;
     word-break: break-all;
     /* Non standard for webkit */
@@ -299,7 +295,7 @@ a:hover {
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-play-state: running;
-    
+
     animation-name: box-light-lightning;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -328,7 +324,7 @@ a:hover {
 }
 
 .button:hover {
-    
+
     border: 3px solid white;
     color: #FFEC00;
 }
@@ -370,7 +366,7 @@ a:hover {
 }
 
 .workshop img {
-    display: block; 
+    display: block;
     margin-bottom:10px;
     padding: 0 15px;
     width:100%
@@ -429,7 +425,7 @@ a:hover {
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-play-state: running;
-    
+
     animation-name: box-dark-animation;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -728,7 +724,7 @@ a:hover {
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-play-state: running;
-    
+
     animation-name: thumbnail-image-animation;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
