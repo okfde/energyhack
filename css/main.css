@@ -232,7 +232,7 @@ a:hover {
 }
 
 .box-schedule {
-    height: 8em;
+    height: 11em;
     padding-top: 10px;
     border-left: 3px solid white;
 }
@@ -763,6 +763,12 @@ a:hover {
 
 .leaflet-popup-content {
     color: black;
+}
+
+@media (max-width: 1200px) {
+    .box-schedule {
+        height: 15em;
+    }
 }
 
 @media (max-width: 991px) {
