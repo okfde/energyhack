@@ -353,6 +353,45 @@ a:hover {
    text-indent: -0.62em;
 }
 
+.results h2 {
+    font-size: 30pt;
+}
+
+.results h4 {
+    font-size: 20pt;
+}
+
+.results img, .results figcaption {
+    display: block;
+    margin: 0 auto;
+}
+
+.results figcaption {
+    font-size: 14pt;
+    text-align: center;
+}
+
+.tw-widget {
+    margin-left: 15px;
+}
+
+.project p {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.results p {
+    padding-bottom: 5px;
+}
+
+#twitter-widget-0 {
+    margin: auto;
+}
+
+.impulse-img {
+    max-height: 400px;
+}
+
 .itemization li:before{
     content:"- ";
 }
