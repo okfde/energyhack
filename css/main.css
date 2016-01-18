@@ -790,6 +790,17 @@ a:hover {
     margin-top: 20px;
 }
 
+.envideo {
+    width:100%;
+    height: 640px;
+    margin: auto;
+}
+
+.envideo iframe {
+    width: 100%;
+    height: 100%;
+}
+
 @-webkit-keyframes thumbnail-image-animation {
     0%     {opacity:0.2;}
     100.0%  {opacity:1.0;}
@@ -832,6 +843,10 @@ a:hover {
 @media (max-width: 418px) {
     #register:after{
         font-size: 70px;
+    }
+
+    .envideo {
+        height: 300px;
     }
 }
 
