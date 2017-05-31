@@ -720,7 +720,14 @@ a:hover {
     background-color: black;
 }
 
+.banner {
+    font-size: 3em;
+    padding-top: 28px;
+}
 
+.banner .red {
+    color: red;
+}
 
 .vcenter {
     display: inline-block;
