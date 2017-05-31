@@ -1,424 +1,464 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="de"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Energiedaten hacken! › EnergyHack Berlin</title>
-        <meta name="description" content="Energiewende hacken! Der Open-Data Energy-Hackday in Berlin macht die Stromversorgung und das Stromnetz besser verständlich und greifbar.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="default-style" content="day">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/day.css" title="day">
-        <link rel="stylesheet" href="css/night.css" title="night">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/styleswitcher.js"></script>
-			  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
-				<!--[if lte IE 8]>
-    			<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
-				<![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="de"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Energiedaten hacken! › EnergyHack Berlin</title>
+	<meta name="description" content="Energiewende hacken! Der Open-Data Energy-Hackday in Berlin macht die Stromversorgung und das Stromnetz besser verständlich und greifbar.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="default-style" content="day">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/day.css" title="day">
+	<link rel="stylesheet" href="css/night.css" title="night">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="js/styleswitcher.js"></script>
+	<link rel="stylesheet" href="css/leaflet.css">
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="css/leaflet.ie.css"/>
+	<![endif]-->
+</head>
+<body style="zoom: 1;" onLoad="initialize()">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+	improve your experience.</p>
+<![endif]-->
+<div class="container">
+	<header class="row-fluid social-media">
+		<ul>
+			<li>
+				<a href="https://twitter.com/EnergyHackB">Twitter</a>
+			</li>
+			<li>
+				<a href="https://github.com/okfde/energyhack">GitHub</a>
+			</li>
+			<li>
+				<a href="..">&lt; BACK</a>
+			</li>
+		</ul>
+	</header>
+	<section>
+		<div id="teaser" class="row-fluid color1">
+			<div class="span12">
+				<h1>Energy<span class="lightning">Hack</span></h1>
+				<h2>Apps für die Energie der Zukunft</h2>
+				<h3>15. Juni 2013 Berlin</h3>
+			</div>
+		</div>
 
-			<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+		<div class="row-fluid color3 review">
+			<div class="span12">
+				<p>
+					Vielen Dank für den tollen Hackday und die großartigen Hacks! <br><br>
+					Am Samstag dem 15. Juni traf sich eine bunte Truppe aus Entwicklern, Open Data Enthusiasten, Energieexperten, Journalisten und Hardware Hackern im <a href="http://www.supermarkt-berlin.net/">Supermarkt Berlin</a>, um es
+					<a href="http://fi.okfn.org/meetups/energy-hackathon-2013/">Finnland</a> und den <a href="http://appsforenergy.challenge.gov/">USA</a> gleichzutun und Anwendungen, Visualisierungen und Gadgets rund um die Themen
+					Stromverbrauch, -erzeugung und Infrastruktur zu entwickeln. Heraus kam eine kreative Auswahl an Hacks, die den Verbrauch im Haushalt transparenter machen, über günstige Zeiten zum Energieverbrauch informieren oder den
+					Verbrauch der Bezirke in Berlin visualisieren. Es folgt eine kurze Zusammenfassung des Tages und der Hacks.
+				</p>
 
-	</head>
-    <body style="zoom: 1;" onLoad="initialize()">
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="container">
-            <header class="row-fluid social-media">
-                <ul>
-                    <li>
-                        <a href="https://twitter.com/EnergyHackB">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/okfde/energyhack">GitHub</a>
-                    </li>
-                    <li>
-                        <a href="..">&lt; BACK</a>
-                    </li>
-                </ul>
-            </header>
-            <section>
-                <div id="teaser" class="row-fluid color1">
-                    <div class="span12">
-                        <h1>Energy<span class="lightning">Hack</span></h1>
-                        <h2>Apps für die Energie der Zukunft</h2>
-                        <h3>15. Juni 2013 Berlin</h3>
-                    </div>
-                </div>
+				<p>
+					Hardfacts: 70 Entwickler, 6 Stunden, 3D Drucker, 6 Stromzähler, Daten rund ums Berliner Stromnetz, Testdaten von Geräten und Haushalten, Hardware & Bastelzeug = 8 kreative Apps. <a id="readmore" href="#" title="">Weiterlesen</a>
+				</p>
+				<div id="more" class="js-hidden">
+					<center><strong><p>Der Tag</p></strong></center>
+					<center><a href="img/photos/day.jpg"><img class="aligncenter size-full wp-image-3159" src="img/photos/day.jpg" alt="crowd" width="500" height="243"/></a></center>
 
-                <div class="row-fluid color3 review">
-                    <div class="span12">
-                        <p>
-                            Vielen Dank für den tollen Hackday und die großartigen Hacks! <br><br>
-                            Am Samstag dem 15. Juni traf sich eine bunte Truppe aus Entwicklern, Open Data Enthusiasten, Energieexperten, Journalisten und Hardware Hackern im <a href="http://www.supermarkt-berlin.net/">Supermarkt Berlin</a>, um es <a href="http://fi.okfn.org/meetups/energy-hackathon-2013/">Finnland</a> und den <a href="http://appsforenergy.challenge.gov/">USA</a> gleichzutun und Anwendungen, Visualisierungen und Gadgets rund um die Themen Stromverbrauch, -erzeugung und Infrastruktur zu entwickeln. Heraus kam eine kreative Auswahl an Hacks, die den Verbrauch im Haushalt transparenter machen, über günstige Zeiten zum Energieverbrauch informieren oder den Verbrauch der Bezirke in Berlin visualisieren. Es folgt eine kurze Zusammenfassung des Tages und der Hacks.
-                        </p>
+					<p><strong>12:00 Uhr</strong> Nach einer kurzen Begrüßung startet der Hackday mit vier Lightening Talks.
+						Christian Jacob von <a href="http://www.stromnetz-berlin.de/de/index.htm">Stromnetz Berlin</a> macht den Anfang und stellt den Open Data Ansatz von Stromnetz Berlin vor. Im Anschluss erzählt Philipp Mahr vom
+						Energie-StartUp <a href="http://www.awaju.com/">Awaju.com</a> darüber, wie sehr sich Verbräuche innerhalb unterschiedlicher Haushalte unterscheiden können, wie wenig Feedback wir als Konsumenten zu unserem Verbrauch
+						bekommen und dementsprechend auch wie schlecht wir über unseren Energieverbrauch informiert sind. Informationsvermittlung und Feedback sind zwei wichtige Schlagworte der Challenges auf dem Hackday, Schlagworte die in
+						den Talks von Verena Schwarz (<a href="http://www.publicartlab-berlin.de/">Public Art Lab</a>) und von Jan-Erik Stange (<a href="http://www.fh-potsdam.de/">FH Potsdam</a>) auf der gestalterischen Ebene adressiert
+						werden.</p>
 
-                        <p>
-                            Hardfacts: 70 Entwickler, 6 Stunden, 3D Drucker, 6 Stromzähler, Daten rund ums Berliner Stromnetz, Testdaten von Geräten und Haushalten, Hardware & Bastelzeug = 8 kreative Apps. <a id="readmore" href="#" title="">Weiterlesen</a>
-                        </p>
-                    <div id="more" class="js-hidden">
-                        <center><strong><p>Der Tag</p></strong></center>
-                        <center><a href="img/photos/day.jpg"><img class="aligncenter size-full wp-image-3159" src="img/photos/day.jpg" alt="crowd" width="500" height="243" /></a></center>
+					<p>
+						<strong>13:00 Uhr</strong> Den Lightening-Talks folgt die Vorstellung eines der zentralen Elemente des Hackdays: der Datensätze.
+						Los geht es mit einer Premiere, den <a href="http://www.netzdaten-berlin.de/web/guest/suchen/-/details/web-service-last-und-erzeugung-berlin">Echtzeitdaten zu Verbrauch und Erzeugung der Berliner Bezirke</a>. Die
+						Schnittstelle für die Daten wurde pünktlich zum Hackday fertiggestellt. Neben weiteren Daten zum Berliner Netz, zu <a
+							href="http://netzdaten-berlin.de/web/guest/suchen/-/details/jahreshochstlast-der-netzlast-2011-berlin">historischen Lastgängen</a> und <a
+							href="http://netzdaten-berlin.de/web/guest/suchen/-/details/standardlastprofil-haushaltskunden-2013-berlin">Verbrauchsprofilen</a> (alle Daten sind als Open Data verfügar und können über <a
+							href="http://www.netzdaten-berlin.de/">netzdaten-berlin.de</a> oder das Berliner Portal <a href="http://www.daten.berlin.de/">daten.berlin.de</a> abgerufen werden) stellte <a
+							href="http://www.yetu.de/">Yetu.de</a> Testdaten zu Haushaltsverbräuchen sowie zu Geräteprofilen zur Verfügung. Auch über Berlin hinaus gab es Daten, zum Beispiel die <a href="http://www.50hertz.com/de/153.htm">Wind-</a>
+						und <a href="http://www.50hertz.com/de/2793.htm">Fotovoltaik Hochrechnungen</a> des Übertragungsnetzbetreibers <a
+							href="http://www.50hertz.com/cps/rde/xchg/trm_de/hs.xsl/index.htm?rdeLocaleAttr=de&amp;&amp;rdeCOQ=SID-90F5AD39-058C094C">50 Hertz</a>.
+					</p>
 
-                        <p><strong>12:00 Uhr</strong> Nach einer kurzen Begrüßung startet der Hackday mit vier Lightening Talks.
-                        Christian Jacob von <a href="http://www.stromnetz-berlin.de/de/index.htm">Stromnetz Berlin</a> macht den Anfang und stellt den Open Data Ansatz von Stromnetz Berlin vor. Im Anschluss erzählt Philipp Mahr vom Energie-StartUp <a href="http://www.awaju.com/">Awaju.com</a> darüber, wie sehr sich Verbräuche innerhalb unterschiedlicher Haushalte unterscheiden können, wie wenig Feedback wir als Konsumenten zu unserem Verbrauch bekommen und dementsprechend auch wie schlecht wir über unseren Energieverbrauch informiert sind. Informationsvermittlung und Feedback sind zwei wichtige Schlagworte der Challenges auf dem Hackday, Schlagworte die in den Talks von Verena Schwarz (<a href="http://www.publicartlab-berlin.de/">Public Art Lab</a>) und von Jan-Erik Stange (<a href="http://www.fh-potsdam.de/">FH Potsdam</a>) auf der gestalterischen Ebene adressiert werden.</p>
+					<p>
+						<strong>13:15 Uhr</strong> In einer Pitchingsession stellen die Teilnehmer erste Projektideen vor und formieren sich zu Teams.
+					</p>
+					<p>
+						<strong>14:00 Uhr</strong> Startschuss für den Hackday. LAN-Kabel werden verlegt, der 3D Drucker beginnt zu drucken, der Wasserkocher wird angeschmissen, damit die Anzeigen der digitalen Strommessgeräte für
+						Testzwecke in die Höhe schießen, die Raspberry PIs blinken, Arduino Kits werden ausgepackt und in Brainstormings die Ideen sortiert.
+					</p>
+					<center><a href="img/photos/day2.jpg"><img class="aligncenter size-full wp-image-3162" src="http://okfn.de/wp-content/blogs.dir/21/files/2013/06/IMG_1197.jpg" alt="work" width="500" height="333"/></a></center>
+					<p><strong>19:00</strong> Alle arbeiten auf Hochtouren – der Abendsnack wird mit einer Hand an der Tastatur eingenommen.</p>
+					<p><strong>20:00</strong> Die Teams präsentieren ihre Projekte und Prototypen.</p>
 
-                        <p>
-                            <strong>13:00 Uhr</strong> Den Lightening-Talks folgt die Vorstellung eines der zentralen Elemente des Hackdays: der Datensätze.
-                            Los geht es mit einer Premiere, den <a href="http://www.netzdaten-berlin.de/web/guest/suchen/-/details/web-service-last-und-erzeugung-berlin">Echtzeitdaten zu Verbrauch und Erzeugung der Berliner Bezirke</a>. Die Schnittstelle für die Daten wurde pünktlich zum Hackday fertiggestellt. Neben weiteren Daten zum Berliner Netz, zu <a href="http://netzdaten-berlin.de/web/guest/suchen/-/details/jahreshochstlast-der-netzlast-2011-berlin">historischen Lastgängen</a> und <a href="http://netzdaten-berlin.de/web/guest/suchen/-/details/standardlastprofil-haushaltskunden-2013-berlin">Verbrauchsprofilen</a> (alle Daten sind als Open Data verfügar und können über <a href="http://www.netzdaten-berlin.de/">netzdaten-berlin.de</a> oder das Berliner Portal <a href="http://www.daten.berlin.de/">daten.berlin.de</a> abgerufen werden) stellte <a href="http://www.yetu.de/">Yetu.de</a> Testdaten zu Haushaltsverbräuchen sowie zu Geräteprofilen zur Verfügung. Auch über Berlin hinaus gab es Daten, zum Beispiel die <a href="http://www.50hertz.com/de/153.htm">Wind-</a> und <a href="http://www.50hertz.com/de/2793.htm">Fotovoltaik Hochrechnungen</a> des Übertragungsnetzbetreibers <a href="http://www.50hertz.com/cps/rde/xchg/trm_de/hs.xsl/index.htm?rdeLocaleAttr=de&amp;&amp;rdeCOQ=SID-90F5AD39-058C094C">50 Hertz</a>.
-                        </p>
+					<center><strong><p>Die Hacks</p></strong></center>
+					<p><strong>#1 Energotchi</strong>
+						Energotchi basiert auf der Idee eines Tamagotchis. Ein kleines, digitales Wesen, dessen Laune sich nach dem Stromverbrauch richtet. Wird viel Strom im Haushalt des Energotchi verbraucht, ändert sich die Farbe des
+						Energotchi auf rot und es wird wütend. Energotchi ist ein Energiesparmaskottchen für Kinder. Auf dem Hackday entstand neben der digitalen Version auch ein 3D-gedrucktes Energotchi zum Anfassen.
+					</p>
 
-                        <p>
-                            <strong>13:15 Uhr</strong> In einer Pitchingsession stellen die Teilnehmer erste Projektideen vor und formieren sich zu Teams.
-                        </p>
-                        <p>
-                            <strong>14:00 Uhr</strong> Startschuss für den Hackday. LAN-Kabel werden verlegt, der 3D Drucker beginnt zu drucken, der Wasserkocher wird angeschmissen, damit die Anzeigen der digitalen Strommessgeräte für Testzwecke in die Höhe schießen, die Raspberry PIs blinken, Arduino Kits werden ausgepackt und in Brainstormings die Ideen sortiert.
-                        </p>
-                        <center><a href="img/photos/day2.jpg"><img class="aligncenter size-full wp-image-3162" src="http://okfn.de/wp-content/blogs.dir/21/files/2013/06/IMG_1197.jpg" alt="work" width="500" height="333" /></a></center>
-                        <p><strong>19:00</strong> Alle arbeiten auf Hochtouren – der Abendsnack wird mit einer Hand an der Tastatur eingenommen.</p>
-                        <p><strong>20:00</strong> Die Teams präsentieren ihre Projekte und Prototypen.</p>
-
-                        <center><strong><p>Die Hacks</p></strong></center>
-                        <p><strong>#1 Energotchi</strong>
-                        Energotchi basiert auf der Idee eines Tamagotchis. Ein kleines, digitales Wesen, dessen Laune sich nach dem Stromverbrauch richtet. Wird viel Strom im Haushalt des Energotchi verbraucht, ändert sich die Farbe des Energotchi auf rot und es wird wütend. Energotchi ist ein Energiesparmaskottchen für Kinder. Auf dem Hackday entstand neben der digitalen Version auch ein 3D-gedrucktes Energotchi zum Anfassen.
-                        </p>
-
-                        <p><strong>#2 Energyclock</strong>
-                        eine Smartphone Anwendung, die Nutzern über ihren Handy-Startscreen Auskunft darüber gibt, wie günstig die Zeit zum Energieverbrauch gerade ist. Der Vorteil der Anwendung ist, dass Nutzer keine App starten müssen, sondern bereits auf ihrem Startscreen die wichtigsten Infos zum Status Quo bekommen. Verwendete Daten: Wetterprognosedaten und Echtzeitdaten der Stadt Berlin.</p>
+					<p><strong>#2 Energyclock</strong>
+						eine Smartphone Anwendung, die Nutzern über ihren Handy-Startscreen Auskunft darüber gibt, wie günstig die Zeit zum Energieverbrauch gerade ist. Der Vorteil der Anwendung ist, dass Nutzer keine App starten müssen,
+						sondern bereits auf ihrem Startscreen die wichtigsten Infos zum Status Quo bekommen. Verwendete Daten: Wetterprognosedaten und Echtzeitdaten der Stadt Berlin.</p>
 
 
-                        <center><a href="http://okfn.de/wp-content/blogs.dir/21/files/2013/06/epuCZs0GUInnup-em90nOxjtKuNS4_6DOvWNtN9vf2o.jpg"><img class="aligncenter size-full wp-image-3146" src="http://okfn.de/wp-content/blogs.dir/21/files/2013/06/epuCZs0GUInnup-em90nOxjtKuNS4_6DOvWNtN9vf2o.jpg" alt="Energybank" width="512" height="288" /></a></center>
-                        <p><strong>#3 Energy Bank</strong>
-                        	Die Energy Bank ist eine Anwendung, die Kindern und Jugendlichen dabei helfen soll, Strom in ihrem Kinderzimmer zu sparen und einen Überblick über den eigenen Verbrauch bzw. die eigene Einsparung zu bekommen. Über eine Leuchtanzeige bekommen die Nutzer unmittelbares Feedback zu ihrem Verhalten. Zusätzlich können sie über eine Anwendung den Verbrauch über längere Zeitperioden hinweg verfolgen. Werden Einsparungsziele erreicht, können die Kinder und Jugendlichen ihre Einsparung in Geld oder Goodies einlösen.</p>
+					<center><a href="https://okfn.de/files/blog/2013/06/epuCZs0GUInnup-em90nOxjtKuNS4_6DOvWNtN9vf2o.jpg"><img class="aligncenter size-full wp-image-3146"
+																																				src="https://okfn.de/files/blog/2013/06/epuCZs0GUInnup-em90nOxjtKuNS4_6DOvWNtN9vf2o.jpg"
+																																				alt="Energybank" width="512" height="288"/></a></center>
+					<p><strong>#3 Energy Bank</strong>
+						Die Energy Bank ist eine Anwendung, die Kindern und Jugendlichen dabei helfen soll, Strom in ihrem Kinderzimmer zu sparen und einen Überblick über den eigenen Verbrauch bzw. die eigene Einsparung zu bekommen. Über
+						eine Leuchtanzeige bekommen die Nutzer unmittelbares Feedback zu ihrem Verhalten. Zusätzlich können sie über eine Anwendung den Verbrauch über längere Zeitperioden hinweg verfolgen. Werden Einsparungsziele erreicht,
+						können die Kinder und Jugendlichen ihre Einsparung in Geld oder Goodies einlösen.</p>
 
-                        <p><strong>#4 Energiekarte Berlin</strong>
-                        Die Energiekarte Berlin ist eine Visualisierung der Echtzeitdaten zum Verbrauch der Stadtteile. Auf Basis einer Farbcodierung kann schnell erfasst werden, welcher Bezirk gerade am meisten Strom verbraucht. Live: <a href="http://felixebert.de/energyhackday">http://felixebert.de/energyhackday</a></p>
+					<p><strong>#4 Energiekarte Berlin</strong>
+						Die Energiekarte Berlin ist eine Visualisierung der Echtzeitdaten zum Verbrauch der Stadtteile. Auf Basis einer Farbcodierung kann schnell erfasst werden, welcher Bezirk gerade am meisten Strom verbraucht. Live: <a
+								href="https://felixebert.de/energyhackday">https://felixebert.de/energyhackday</a></p>
 
 
-                        <center><a href="http://okfn.de/wp-content/blogs.dir/21/files/2013/06/VUrug24OYt3ZZWV0sklGfTG6Rl6M0wR7w7HHxeh4wwk.jpg"><img class="aligncenter size-full wp-image-3151" src="http://okfn.de/wp-content/blogs.dir/21/files/2013/06/VUrug24OYt3ZZWV0sklGfTG6Rl6M0wR7w7HHxeh4wwk.jpg" alt="printer" width="512" height="288" /></a>
-                        </center>
-                        <p><strong>#5 Consumption Bubbles</strong>
-                        Consumption Bubbles ist ein interdisziplinäres Projekt. Yoda besteht aus einem 3D-gedruckten Kopf mit leuchtenden LED-Augen und einer kleinen Luftpumpe. Yoda kann sprechen und informiert seine Schüler über den aktuellen Stromverbrauch und warnt sie bei zu hohem Verbrauch mit „This is the path to the dark side”, dabei leuchten seine Augen in unterschiedlichen Farben. Sein volles Können entfaltet Yoda unter Wasser, dann bewegt sich sein Mund über Luftblasen beim Sprechen. Zusätzlich kann man an der Größe der Blasen den aktuellen Stromverbrauch ablesen. Update: <a href="http://vimeo.com/68650398?t=0m52s" target="_blank">Video von Yoda in Aktion.</a></p>
+					<center><a href="https://okfn.de/files/blog/2013/06/VUrug24OYt3ZZWV0sklGfTG6Rl6M0wR7w7HHxeh4wwk.jpg"><img class="aligncenter size-full wp-image-3151"
+																																				src="https://okfn.de/files/blog/2013/06/VUrug24OYt3ZZWV0sklGfTG6Rl6M0wR7w7HHxeh4wwk.jpg"
+																																				alt="printer" width="512" height="288"/></a>
+					</center>
+					<p><strong>#5 Consumption Bubbles</strong>
+						Consumption Bubbles ist ein interdisziplinäres Projekt. Yoda besteht aus einem 3D-gedruckten Kopf mit leuchtenden LED-Augen und einer kleinen Luftpumpe. Yoda kann sprechen und informiert seine Schüler über den
+						aktuellen Stromverbrauch und warnt sie bei zu hohem Verbrauch mit „This is the path to the dark side”, dabei leuchten seine Augen in unterschiedlichen Farben. Sein volles Können entfaltet Yoda unter Wasser, dann
+						bewegt sich sein Mund über Luftblasen beim Sprechen. Zusätzlich kann man an der Größe der Blasen den aktuellen Stromverbrauch ablesen. Update: <a href="https://vimeo.com/68650398?t=0m52s" target="_blank">Video von
+							Yoda in Aktion.</a></p>
 
-                        <p><strong>#6 iPhone App für Volkszähler</strong>
-                        Der vorgestellte Prototyp liest aktuelle Daten von einer Volkszähler-Installation und zeigt sie auf dem iPhone an. Gleichzeitig wird angegeben, wie viel der aktuelle Verbrauch kostet.</p>
+					<p><strong>#6 iPhone App für Volkszähler</strong>
+						Der vorgestellte Prototyp liest aktuelle Daten von einer Volkszähler-Installation und zeigt sie auf dem iPhone an. Gleichzeitig wird angegeben, wie viel der aktuelle Verbrauch kostet.</p>
 
-                        <p><strong>#7 Flickrgy </strong>
-                        Flickrgy basiert, wie der Name bereits verrät, auf Flickr-Streams. Je nachdem wie viel Strom in einer Stadt/oder einem Haushalt gerade verbraucht wird, ändern sich die Inhalte der über Schlagworte gefilterten Bilder. Ist der Verbrauch gering, zeigt der Stream schöne harmonische Bilder, wird viel verbraucht, ändern sich die Bilder hin zu eher depressiven und dunklen Fotos.</p>
+					<p><strong>#7 Flickrgy </strong>
+						Flickrgy basiert, wie der Name bereits verrät, auf Flickr-Streams. Je nachdem wie viel Strom in einer Stadt/oder einem Haushalt gerade verbraucht wird, ändern sich die Inhalte der über Schlagworte gefilterten Bilder.
+						Ist der Verbrauch gering, zeigt der Stream schöne harmonische Bilder, wird viel verbraucht, ändern sich die Bilder hin zu eher depressiven und dunklen Fotos.</p>
 
-                        <p><strong>#8 Smeterengine-JSON </strong>
-                        SmeterEngine-JSON ist ein Proxy für den Last-Web-Service von Stromnetz Berlin, der die Anfrage an die Schnittstelle vereinfacht und sie auch direkt aus dem Browser ermöglicht.</p>
+					<p><strong>#8 Smeterengine-JSON </strong>
+						SmeterEngine-JSON ist ein Proxy für den Last-Web-Service von Stromnetz Berlin, der die Anfrage an die Schnittstelle vereinfacht und sie auch direkt aus dem Browser ermöglicht.</p>
 
-                        <p>Eine Jury bestehend aus Vertretern der <a href="http://okfn.de/">Open Knowlegde Foundation</a>, <a href="http://www.stromnetz-berlin.de/de/index.htm">Stromnetz Berlin</a> und <a href="http://www.yetu.de/">Yetu</a> prämierte die Anwednungen. Die Preise gingen an folgende Anwendungen/Prototypen:  
-                        <ul class="bulletlist">
-                         	<li>Erster Preis: Consumption Bubbles. Gewinn: Arduino Kits von fritzing.</li>
+					<p>Eine Jury bestehend aus Vertretern der <a href="https://okfn.de/">Open Knowlegde Foundation</a>, <a href="https://www.stromnetz-berlin.de/de/index.htm">Stromnetz Berlin</a> und <a href="http://www.yetu.de/">Yetu</a>
+						prämierte die Anwednungen. Die Preise gingen an folgende Anwendungen/Prototypen:
+					<ul class="bulletlist">
+						<li>Erster Preis: Consumption Bubbles. Gewinn: Arduino Kits von fritzing.</li>
 
-                            <li>Zweiter Preis: Energotchi. Gewinn: Raspberry PIs und Zubehör.</li>
+						<li>Zweiter Preis: Energotchi. Gewinn: Raspberry PIs und Zubehör.</li>
 
-                            <li>Dritter Preis: Energy Bank und Team Flickrgy. Gewinn: eine Tour das Berliner Stromnetz.</li>
-                        </ul></p>
-                        <p>Vielen Dank allen Teilnehmern und Unterstützern für den großartigen und inspirierenden Tag! Bis zum nächsten Hackday!
-                        Mehr Fotos vom Event finden sich auf <a href="https://www.flickr.com/photos/okfn/sets/72157634242408295/">Flickr</a>.</p>
+						<li>Dritter Preis: Energy Bank und Team Flickrgy. Gewinn: eine Tour das Berliner Stromnetz.</li>
+					</ul>
+					</p>
+					<p>Vielen Dank allen Teilnehmern und Unterstützern für den großartigen und inspirierenden Tag! Bis zum nächsten Hackday!
+						Mehr Fotos vom Event finden sich auf <a href="https://www.flickr.com/photos/okfn/sets/72157634242408295/">Flickr</a>.</p>
 
-                    </div>
-                </div>
-            </div>
-<div class="row-fluid spaceless">
-    <div class="span6">
-        <span class="heading color1">Hackday-Review</span>
-    </div>
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid spaceless">
+			<div class="span6">
+				<span class="heading color1">Hackday-Review</span>
+			</div>
+		</div>
+		<div class="flex-video widescreen">
+			<iframe src="https://player.vimeo.com/video/71322548?title=0&amp;byline=0&amp;portrait=0&amp;color=41c7a5" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+		<div class="row-fluid spaceless">
+			<div class="span2">
+				<span class="heading color1">About</span>
+			</div>
+		</div>
+		<div id="about" class="row-fluid color2">
+			<div class="span12">
+				<p>Deutschland spricht über die Energiewende, über nachhaltige Versorgung und darüber, wie wir unseren Energieverbrauch in Zukunft einschränken und Energie effizienter nutzen können.</p>
+				<p>Mit dem Hackday “Energy Hacks” wollen wir einen Schritt in die Richtung dieser Zukunft gehen und uns überlegen, welche Geräte und Anwendungen uns dabei helfen könnten, effizienter mit Strom umzugehen und das abstrakte
+					Thema Stromversorgung und die Infrastruktur Stromnetz besser verständlich und greifbar zu machen. Konkret: Wir wollen die Energiewende “hacken” und uns abseits theoretischer Diskussionen daran machen, Werkzeuge für die
+					Zukunft zu bauen. <a id="readmore" href="#" title="">Weiterlesen</a></p>
+				<div id="more" class="js-hidden"><p>In Ländern wie den USA und <a href="http://fi.okfn.org/energy-hackathon-2013/" target="_blank">Finnland</a> hat man sich diesen Themen und Fragestellungen auf <a
+						href="http://fi.okfn.org/energy-hackathon-2013/" target="_blank">Hackdays</a> und in <a href="http://appsforenergy.challenge.gov/" target="_blank">App-Wettbewerben</a> bereits angenommen und spannende Anwendungen und
+					Tools für Verbraucher entwickelt. Auch in Deutschland ist es an der Zeit, sich auf kreative Weise mit dem Thema Stromversorgung und Verbrauch auseinanderzusetzen! Darum will “Energy Hacks” in Berlin Entwickler, Designer
+					und Experten versammeln, um gemeinsam Anwendungen und Werkzeuge für die Energie der Zukunft zu entwickeln."Folgende Daten werden euch auf dem Hack day zur Verfügung stehen:</p>
+					<ul class="bulletlist">
+						<li>Aktuelle Daten zur Last und Erzeugung in Berlin (15-Mintenwerte je Bezirk)</li>
+						<li>Historische Lastgangdaten</li>
+						<li>Durchschnittliche Verbrauchsdaten (Standardlastprofile)</li>
+						<li>Statistische Daten zu Bevölkerungszahl, Haushalten, Gewerben etc.</li>
+						<li>Daten aus anderen europäischen Städten (z.B. Hamburg und Helsinki)</li>
+						<li>zur Verfügung stehen elektronische Zähler zum "Selbstablesen"</li>
+						<li>weitere Datensätze folgen ...</li>
+					</ul>
+					<p>Für Anregungen und Ideen zu weiteren Datensätzen meldet euch bitte hier: julia.kloiber[at]okfn.org</p>
+					<p>Partner des Hackdays sind die <a href="https://okfn.de/">Open Knowledge Foundation Deutschland</a>, der Stromnetzbetreiber <a href="http://www.stromnetz-berlin.de/de/index.htm">Stromnetz Berlin GmbH </a> (ehemals
+						ehemals Vattenfall Europe Distribution Berlin GmbH), die Senatsverwaltung für Wirtschaft, Technologie und Forschung und das Projekt <a href="http://opencities.net/Berlin">Open Cities</a>.</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="challenges" class="row-fluid">
+			<div class="span6 color3">
+				<div class="heading color1">Challenge 1:<br/> Stromversorgung besser verstehen</div>
+				<p>Welcher Strom fließt durch das Berliner Netz? Wieviel verbraucht die Stadt, in welchen Verhältnis steht dieser Verbrauch und zu welchen Zeitpunkten ist der Verbrauch besonders hoch?</p>
+				<h4>Gesucht:</h4>
+				<p>Um diese Fragen zu beantworten, suchen wir:
+					Visualisierungen/für den öffentlichen Raum und
+					Apps für BürgerInnen.
+					z.B. Datenvisualisierungen zum Thema Energienetzwerk, -verbrauch und Ressourcen sowie Künstlerische Interventionen im öffentlichen Raum.</p>
+				<h4>Inspirationen:</h4>
+				<ul class="thumbnails">
+					<li class="span6">
+						<div class="thumbnail">
+							<a href="http://www.juliusvonbismarck.com/bank/index.php?/projects/stimmungsgasometer/">
+								<img src="img/challenges/smile.jpg" alt="Public Face I"/>
+								<p>Public Face I - öffentliches Stimmungsbarometer</p>
+							</a>
+						</div>
+					</li>
+					<li class="span6">
+						<div class="thumbnail">
+							<a href="http://visualization.geblogs.com/visualization/germanenergy/">
+								<img src="img/challenges/energie.jpg" alt="Visualisierung zur Energieversorgung in Deutschland"/>
+								<p>Visualisierung zur Energieversorgung in Deutschland</p>
+							</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="thumbnails">
+					<li class="span6">
+						<div class="thumbnail">
+							<a href="http://hehe.org2.free.fr/?language=en">
+								<img src="img/challenges/greencloud.jpg" alt="The Green Cloud Project"/>
+								<p>Visualisierung im öffentlichen Raum: The Green Cloud Project</p>
+							</a>
+						</div>
+					</li>
+					<li class="span6">
+						<div class="thumbnail">
+							<img src="img/challenges/deineidee.jpg" alt="Deine Idee?"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="span6 color3">
+				<div class="heading color1">Challenge 2: <br/>Energieeffizienz</div>
+				<p>Wie können wir als Verbraucher effizienter mit Strom umgehen? Wieviel verbrauchen wir eigentlich und in welchem Verhältnis steht das zu den anderen Verbrauchern?</p>
+				<h4>Gesucht:</h4>
+				<p>Um diese Fragen zu beantworten, suchen wir:
+					Hardware und Software Anwendungen, die zum Stromsparen anregen.
+					z.B. Smartphone- und Webapps für Verbraucher und Energiespargadgets.</p>
+				<h4>Inspirationen:</h4>
+				<ul class="thumbnails">
+					<li class="span6">
+						<div class="thumbnail">
+							<a href="http://www.misusage.org/wordpress/?page_id=399"><img src="img/challenges/emps.jpg" alt="EMPS - Der emphatische Stromspar-Helfer"/>
+								<p>EMPS - Der emphatische Stromspar-Helfer</p></a>
+						</div>
+					</li>
+					<li class="span6">
+						<div class="thumbnail">
+							<a href="http://appsforenergy.challenge.gov/submissions/7987-leafully">
+								<img src="img/challenges/leafully.jpg" alt="Leafully - Stromverbrauch einfach verstehen"/>
+								<p>Leafully - Stromverbrauch einfach verstehen</p></a>
+						</div>
+					</li>
+				</ul>
+				<ul class="thumbnails">
+					<li class="span6">
+						<div class="thumbnail">
+							<a href="http://appsforenergy.challenge.gov/submissions/7998-wotz">
+								<img src="img/challenges/wotz.jpg" alt="Wotz - Telling your Energy Story"/>
+								<p>Wotz - Telling your Energy Story</p></a>
+						</div>
+					</li>
+					<li class="span6">
+						<div class="thumbnail">
+							<img src="img/challenges/deineidee.jpg" alt="Deine Idee?"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row-fluid color2 skills">
+			<div class="span12">
+				<h4>Ihr seid Softwareentwickler, hackt Hardware (z.B. Raspberry PI, Arduino), beschäftigt euch mit Design oder habt gute Ideen wie sich komplexe Themen gut kommunizieren lassen? Dann:</h4>
+			</div>
+		</div>
+		<div id="register" class="row-fluid">
+			<a href="https://energyhackberlin.eventbrite.com/#" class="span12" target="_blank" title="">Jetzt Anmelden!</a>
+		</div>
+		<div id="challenges" class="row-fluid">
+			<div class="span12 color4">
+				<div class="heading color1">
+					Preise:
+				</div>
+				<ul class="thumbnails">
+					<li class="span4">
+						<div class="thumbnail">
+							<img src="img/challenges/RP.png" alt="Raspberry PI"/>
+						</div>
+					</li>
+					<li class="span4">
+						<div class="thumbnail">
+							<img src="img/challenges/arduino.png" alt="Arduino"/>
+						</div>
+					</li>
+					<li class="span4">
+						<div class="thumbnail">
+							<img src="img/challenges/fuehrung.png" alt="Fuehrungen"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row-fluid spaceless">
+			<div class="span2">
+				<span class="heading color1">Location</span>
+			</div>
+		</div>
+		<div id="location" class="row-fluid color2">
+			<div class="span12">
+				<h4>Supermarkt Berlin / Brunnenstr. 64 / 13355 Berlin / U-BHF Voltastr.</h4>
+				<div id="map"></div>
+			</div>
+		</div>
+
+		<div class="row-fluid spaceless">
+			<div class="span8">
+				<span class="heading color1">Schedule (parts of the program will be in English)</span>
+			</div>
+		</div>
+		<div id="schedule" class="row-fluid">
+			<div class="span2 color2">
+				<p><span class="clock"></span>12:00<br/>Begrüßung</p>
+			</div>
+			<div class="span2 color2shade1">
+				<p><span class="clock"></span>12:30<br/>Kurz- präsentationen & Projektpitches</p>
+			</div>
+			<div class="span2 color2shade2">
+				<p><span class="clock"></span>13:30<br/>Mittagssnack</p>
+			</div>
+			<div class="span2 color2shade3">
+				<p><span class="clock"></span>14:00<br/>Start des Entwicklertages</p>
+			</div>
+			<div class="span2 color2shade4">
+				<p><span class="clock"></span>19:00<br/>Zwischen- präsentationen und Preisverleihung</p>
+			</div>
+			<div class="span2 color2shade5">
+				<p><span class="clock"></span><br/>Open End</p>
+			</div>
+		</div>
+
+		<div class="row-fluid spaceless">
+			<div class="span6">
+				<span class="heading color1">Expertenworkshop-Video</span>
+			</div>
+		</div>
+		<div id="video" class="row-fluid color3">
+			<div class="span12">
+				<p> Zur Vorbereitung des Hack Days haben sich Experten und Wissenschaftlern aus dem Bereich Energie, mit Softwareentwicklern und Open Data Enthusiasten getroffen.
+					Ziel des Workshops war es die thematischen Schwerpunkte für den Hack Day auszuarbeiten. Das folgende Video gibt einen kurzen Überblick über die Brainstorming- und Ideenfindungssessions des Treffens.
+				</p>
+				<div class="flex-video widescreen">
+					<iframe src="https://player.vimeo.com/video/65389151?title=0&amp;byline=0&amp;portrait=0&amp;color=41c7a5" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<p><a href="https://vimeo.com/65389151">Expertenworkshop für den Hackday "EnergyHack"</a> from <a href="https://vimeo.com/okf">Open Knowledge Foundation</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+	<button onClick="switchStyleSheet()" id="switch" class="visible-desktop"></button>
 </div>
-        <div class="flex-video widescreen">
-<iframe src="http://player.vimeo.com/video/71322548?title=0&amp;byline=0&amp;portrait=0&amp;color=41c7a5" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-</div>
-<div class="row-fluid spaceless">
-    <div class="span2">
-        <span class="heading color1">About</span>
-    </div>
-</div>
-<div id="about" class="row-fluid color2">
-    <div class="span12">
-        <p>Deutschland spricht über die Energiewende, über nachhaltige Versorgung und darüber, wie wir unseren Energieverbrauch in Zukunft einschränken und Energie effizienter nutzen können.</p>
-        <p>Mit dem Hackday “Energy Hacks” wollen wir einen Schritt in die Richtung dieser Zukunft gehen und uns überlegen, welche Geräte und Anwendungen uns dabei helfen könnten, effizienter mit Strom umzugehen und das abstrakte Thema Stromversorgung und die Infrastruktur Stromnetz besser verständlich und greifbar zu machen. Konkret: Wir wollen die Energiewende “hacken” und uns abseits theoretischer Diskussionen daran machen, Werkzeuge für die Zukunft zu bauen. <a id="readmore" href="#" title="">Weiterlesen</a></p>
-        <div id="more" class="js-hidden"><p>In Ländern wie den USA und <a href="http://fi.okfn.org/energy-hackathon-2013/" target="_blank">Finnland</a> hat man sich diesen Themen und Fragestellungen auf <a href="http://fi.okfn.org/energy-hackathon-2013/" target="_blank">Hackdays</a> und in <a href="http://appsforenergy.challenge.gov/" target="_blank">App-Wettbewerben</a> bereits angenommen und spannende Anwendungen und Tools für Verbraucher entwickelt. Auch in Deutschland ist es an der Zeit, sich auf kreative Weise mit dem Thema Stromversorgung und Verbrauch auseinanderzusetzen! Darum will “Energy Hacks” in Berlin Entwickler, Designer und Experten versammeln, um gemeinsam Anwendungen und Werkzeuge für die Energie der Zukunft zu entwickeln."Folgende Daten werden euch auf dem Hack day zur Verfügung stehen:</p>
-<ul class="bulletlist">
-<li>Aktuelle Daten zur Last und Erzeugung in Berlin (15-Mintenwerte je Bezirk)</li> 
-<li>Historische Lastgangdaten</li>
-<li>Durchschnittliche Verbrauchsdaten  (Standardlastprofile)</li>
-<li>Statistische Daten zu Bevölkerungszahl, Haushalten, Gewerben etc.</li>
-<li>Daten aus anderen europäischen Städten (z.B.  Hamburg und Helsinki)</li>
-<li>zur Verfügung stehen elektronische Zähler zum "Selbstablesen"</li>
-<li>weitere Datensätze folgen ... </li>
-</ul>
-<p>Für Anregungen und Ideen zu weiteren Datensätzen meldet euch bitte hier: julia.kloiber[at]okfn.org</p>
-<p>Partner des Hackdays sind die <a href="http://okfn.de/">Open Knowledge Foundation Deutschland</a>, der Stromnetzbetreiber <a href="http://www.stromnetz-berlin.de/de/index.htm">Stromnetz Berlin GmbH </a> (ehemals ehemals Vattenfall Europe Distribution Berlin GmbH), die Senatsverwaltung für Wirtschaft, Technologie und Forschung und das Projekt <a href="http://opencities.net/Berlin">Open Cities</a>.</p>
-</div>
-    </div>
-</div>
-
-<div id="challenges" class="row-fluid">
-    <div class="span6 color3">
-        <div class="heading color1">Challenge 1:<br /> Stromversorgung besser verstehen</div>
-        <p>Welcher Strom fließt durch das Berliner Netz? Wieviel verbraucht die Stadt, in welchen Verhältnis steht dieser Verbrauch und zu welchen Zeitpunkten ist der Verbrauch besonders hoch?</p>
-        <h4>Gesucht:</h4>
-        <p>Um diese Fragen zu beantworten, suchen wir:
-        Visualisierungen/für den öffentlichen Raum und
-        Apps für BürgerInnen.
-        z.B. Datenvisualisierungen zum Thema Energienetzwerk, -verbrauch und Ressourcen sowie Künstlerische Interventionen im öffentlichen Raum.</p>
-        <h4>Inspirationen:</h4>
-        <ul class="thumbnails">
-            <li class="span6">
-                <div class="thumbnail">
-                    <a href="http://www.juliusvonbismarck.com/bank/index.php?/projects/stimmungsgasometer/">
-                    <img src="img/challenges/smile.jpg" alt="Public Face I" />
-                    <p>Public Face I - öffentliches Stimmungsbarometer</p>
-                    </a>
-                </div>
-            </li>
-            <li class="span6">
-                <div class="thumbnail">
-                    <a href="http://visualization.geblogs.com/visualization/germanenergy/">
-                    <img src="img/challenges/energie.jpg" alt="Visualisierung zur Energieversorgung in Deutschland" />
-                    <p>Visualisierung zur Energieversorgung in Deutschland</p>
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <ul class="thumbnails">
-            <li class="span6">
-                <div class="thumbnail">
-                    <a href="http://hehe.org2.free.fr/?language=en">
-                    <img src="img/challenges/greencloud.jpg" alt="The Green Cloud Project" />
-                    <p>Visualisierung im öffentlichen Raum: The Green Cloud Project</p>
-                    </a>
-                </div>
-            </li>
-            <li class="span6">
-                <div class="thumbnail">
-                    <img src="img/challenges/deineidee.jpg" alt="Deine Idee?" />
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="span6 color3">
-        <div class="heading color1">Challenge 2: <br />Energieeffizienz</div>
-        <p>Wie können wir als Verbraucher effizienter mit Strom umgehen? Wieviel verbrauchen wir eigentlich und in welchem Verhältnis steht das zu den anderen Verbrauchern?</p>
-        <h4>Gesucht:</h4>
-        <p>Um diese Fragen zu beantworten, suchen wir:
-        Hardware und Software Anwendungen, die zum Stromsparen anregen.
-        z.B. Smartphone- und Webapps für Verbraucher und Energiespargadgets.</p>
-        <h4>Inspirationen:</h4>
-        <ul class="thumbnails">
-            <li class="span6">
-                <div class="thumbnail">
-                    <a href="http://www.misusage.org/wordpress/?page_id=399"><img src="img/challenges/emps.jpg" alt="EMPS - Der emphatische Stromspar-Helfer" />
-                    <p>EMPS - Der emphatische Stromspar-Helfer</p></a>
-                </div>
-            </li>
-            <li class="span6">
-                <div class="thumbnail">
-                    <a href="http://appsforenergy.challenge.gov/submissions/7987-leafully">
-                    <img src="img/challenges/leafully.jpg" alt="Leafully - Stromverbrauch einfach verstehen" />
-                    <p>Leafully - Stromverbrauch einfach verstehen</p></a>
-                </div>
-            </li>
-        </ul>
-        <ul class="thumbnails">
-            <li class="span6">
-                <div class="thumbnail">
-                    <a href="http://appsforenergy.challenge.gov/submissions/7998-wotz">
-                    <img src="img/challenges/wotz.jpg" alt="Wotz - Telling your Energy Story" />
-                    <p>Wotz - Telling your Energy Story</p></a>
-                </div>
-            </li>
-            <li class="span6">
-                <div class="thumbnail">
-                    <img src="img/challenges/deineidee.jpg" alt="Deine Idee?" />
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="row-fluid color2 skills">
-    <div class="span12">
-        <h4>Ihr seid Softwareentwickler, hackt Hardware (z.B. Raspberry PI, Arduino), beschäftigt euch mit Design oder habt gute Ideen wie sich komplexe Themen gut kommunizieren lassen? Dann:</h4>
-    </div>
-</div>
-<div id="register" class="row-fluid">
-    <a href="http://energyhackberlin.eventbrite.com/#" class="span12" target="_blank" title="">Jetzt Anmelden!</a>
-</div>
-<div id="challenges" class="row-fluid">
-    <div class="span12 color4">
- 	   <div class="heading color1">
- 	   	Preise:
- 	   </div>
-        <ul class="thumbnails">
-            <li class="span4">
-                <div class="thumbnail">
-                    <img src="img/challenges/RP.png" alt="Raspberry PI" />
-                </div>
-            </li>
-            <li class="span4">
-                <div class="thumbnail">
-                    <img src="img/challenges/arduino.png" alt="Arduino" />
-                </div>
-            </li>
-    	<li class="span4">
-                <div class="thumbnail">
-                    <img src="img/challenges/fuehrung.png" alt="Fuehrungen" />
-                </div>
-            </li>
-    	</ul>
-    </div>
-</div>
-                
-<div class="row-fluid spaceless">
-    <div class="span2">
-        <span class="heading color1">Location</span>
-    </div>
-</div>
-<div id="location" class="row-fluid color2">
-    <div class="span12">
-        <h4>Supermarkt Berlin / Brunnenstr. 64 / 13355 Berlin / U-BHF Voltastr.</h4>
-        <div id="map"></div>
-    </div>
-</div>
-
-<div class="row-fluid spaceless">
-    <div class="span8">
-        <span class="heading color1">Schedule (parts of the program will be in English)</span>
-    </div>
-</div>
-<div id="schedule" class="row-fluid">
-    <div class="span2 color2">
-        <p><span class="clock"></span>12:00<br />Begrüßung</p>
-    </div>
-    <div class="span2 color2shade1">
-        <p><span class="clock"></span>12:30<br />Kurz- präsentationen & Projektpitches</p>
-    </div>
-    <div class="span2 color2shade2">
-        <p><span class="clock"></span>13:30<br />Mittagssnack</p>
-    </div>
-    <div class="span2 color2shade3">
-        <p><span class="clock"></span>14:00<br />Start des Entwicklertages</p>
-    </div>
-    <div class="span2 color2shade4">
-        <p><span class="clock"></span>19:00<br />Zwischen- präsentationen und Preisverleihung</p>
-    </div>
-    <div class="span2 color2shade5">
-        <p><span class="clock"></span><br />Open End</p>
-    </div>
-</div>
-
-<div class="row-fluid spaceless">
-    <div class="span6">
-        <span class="heading color1">Expertenworkshop-Video</span>
-    </div>
-</div>
-<div id="video" class="row-fluid color3">
-    <div class="span12">
-        <p> Zur Vorbereitung des Hack Days haben sich Experten und Wissenschaftlern aus dem Bereich Energie, mit Softwareentwicklern und Open Data Enthusiasten getroffen.
-        Ziel des Workshops war es die thematischen Schwerpunkte für den Hack Day auszuarbeiten. Das folgende Video gibt einen kurzen Überblick über die Brainstorming- und Ideenfindungssessions des Treffens.
-        </p>
-        <div class="flex-video widescreen">
-<iframe src="http://player.vimeo.com/video/65389151?title=0&amp;byline=0&amp;portrait=0&amp;color=41c7a5" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/65389151">Expertenworkshop für den Hackday "EnergyHack"</a> from <a href="http://vimeo.com/okf">Open Knowledge Foundation</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-        </div>
-    </div>
-</div>
-
-
-            </section>
-            <button onClick="switchStyleSheet()" id="switch" class="visible-desktop"></button>
-        </div>
-        <footer class="color1">
-            <div class="container">
-             <div class="row-fluid">
-                <div class="span9">
-                    <div class="row-fluid">
-                        <h5>Ein Projekt von:</h5>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span3">
-                            <a href="http://okfn.de">
-                                <img src="/img/OKF_logo.png" alt="Open Knowledge Foundation Deutschland" />
-                            </a>
-                        </div>
-                        <div class="span3">
-                            <a href="http://www.stromnetz-berlin.de/de/index.htm">
-                                <img src="/img/SB_logo1.png" alt="Stromnetz Berlin" />
-                            </a>
-                        </div>
-                        <div class="span6">
-                            <a href="http://opencities.net/Berlin">
-                                <img src="/img/OC_logo.png" alt="Open Cities" />
-                            </a>
-                            <a href="http://opencities.hackathome.com/">
-                                <img src="/img/tourism_logo.png" alt="Open Cities" />
-                            </a>
-                        </div>
-                    </div>
-                	<div class="row-fluid">
-                	   <h5>Hochschulpartner:</h5>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span4">
-                            <a href="http://www.fh-potsdam.de/">
-                                <img src="/img/fhp.png" alt="FH Potsdam" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                	   <h6>weitere Unterstützer:</h6>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span1">
-                            <a href="http://www.yetu.de/">
-                                <img src="/img/yetulogo.png" alt="YETU" />
-                            </a>
-                        </div>
-                         <div class="span2">
-                    <a href="http://www.greenhackathon.com/">
-                        <img src="/img/green_logo.png" alt="Greenhackathon" />
-                        </a>
-                        </div>
-                        <div class="span2">
-                    <a href="http://www.fritzing.org/">
-                        <img src="/img/fritzing.png" alt="Fritzing" />
-                        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="span3 contact-area">
-                    <p>
-                        <a href="mailto:julia.kloiber@okfn.org">Kontakt</a><br/>
-                        <a href="mailto:julia.kloiber@okfn.org">Sponsor werden</a><br/>
-                        <a href="https://github.com/okfde/energyhack">Auf Github forken</a>
-                    </p>
-                    <p>
-                        Impressum:<br/>
-                        Open Knowledge Foundation Deutschland e.V.<br/>
-                        Schlesische Str. 6, 10997 Berlin
-                    </p>
-                    <p>
-                        Design:<br/>
-                        <a href="http://rainbow-unicorn.com/">Rainbow-Unicorn.com</a><br/>
-                        Umsetzung:<br/>
-                        <a href="http://jan.brennenstuhl.me" title="Jan Brennenstuhl: Software, Web, Open Data">Jan Brennenstuhl</a>
-                    </p>
-                </div>
-            </div>
-        </footer>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+<footer class="color1">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span9">
+				<div class="row-fluid">
+					<h5>Ein Projekt von:</h5>
+				</div>
+				<div class="row-fluid">
+					<div class="span3">
+						<a href="https://okfn.de">
+							<img src="/img/OKF_logo.png" alt="Open Knowledge Foundation Deutschland"/>
+						</a>
+					</div>
+					<div class="span3">
+						<a href="http://www.stromnetz-berlin.de/de/index.htm">
+							<img src="/img/SB_logo1.png" alt="Stromnetz Berlin"/>
+						</a>
+					</div>
+					<div class="span6">
+						<a href="http://opencities.net/Berlin">
+							<img src="/img/OC_logo.png" alt="Open Cities"/>
+						</a>
+						<a href="http://opencities.hackathome.com/">
+							<img src="/img/tourism_logo.png" alt="Open Cities"/>
+						</a>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<h5>Hochschulpartner:</h5>
+				</div>
+				<div class="row-fluid">
+					<div class="span4">
+						<a href="http://www.fh-potsdam.de/">
+							<img src="/img/fhp.png" alt="FH Potsdam"/>
+						</a>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<h6>weitere Unterstützer:</h6>
+				</div>
+				<div class="row-fluid">
+					<div class="span1">
+						<a href="http://www.yetu.de/">
+							<img src="/img/yetulogo.png" alt="YETU"/>
+						</a>
+					</div>
+					<div class="span2">
+						<a href="http://www.greenhackathon.com/">
+							<img src="/img/green_logo.png" alt="Greenhackathon"/>
+						</a>
+					</div>
+					<div class="span2">
+						<a href="http://www.fritzing.org/">
+							<img src="/img/fritzing.png" alt="Fritzing"/>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="span3 contact-area">
+				<p>
+					<a href="mailto:julia.kloiber@okfn.de">Kontakt</a><br/>
+					<a href="mailto:julia.kloiber@okfn.de">Sponsor werden</a><br/>
+					<a href="https://github.com/okfde/energyhack">Auf Github forken</a>
+				</p>
+				<p>
+					Impressum:<br/>
+					Open Knowledge Foundation Deutschland e.V.<br/>
+					Schlesische Str. 6, 10997 Berlin
+				</p>
+				<p>
+					Design:<br/>
+					<a href="http://rainbow-unicorn.com/">Rainbow-Unicorn.com</a><br/>
+					Umsetzung:<br/>
+					<a href="http://jan.brennenstuhl.me" title="Jan Brennenstuhl: Software, Web, Open Data">Jan Brennenstuhl</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="js/leaflet.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>
