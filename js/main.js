@@ -11,12 +11,12 @@ function initialize() {
 
 	map = L.map('map', {
 		scrollWheelZoom: false
-	}).setView([52.50011, 13.39147], 17);
+	}).setView([52.48126, 13.35612], 17);
 
 	map.addLayer(toner);
 
-	L.marker([52.50011, 13.39147]).addTo(map)
-		.bindPopup('Impact Hub Berlin')
+	L.marker([52.48126, 13.35612]).addTo(map)
+		.bindPopup('InfraLab Berlin')
 		.openPopup();
 }
 
