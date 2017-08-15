@@ -37,15 +37,15 @@ body {
     font-family: 'misoregular', sans-serif;
     background-color: black;
     background-image: url('../img/bg_night.png');
-    -webkit-animation-name: animate-background-html;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-play-state: running;
+    /*-webkit-animation-name: animate-background-html;*/
+    /*-webkit-animation-duration: 5s;*/
+    /*-webkit-animation-timing-function: ease-in-out;*/
+    /*-webkit-animation-play-state: running;*/
 
-    animation-name: animate-background-html;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-play-state: running;
+    /*animation-name: animate-background-html;*/
+    /*animation-duration: 5s;*/
+    /*animation-timing-function: ease-in-out;*/
+    /*animation-play-state: running;*/
 }
 
 .bg {
@@ -291,15 +291,15 @@ a:hover {
     padding-top: 10px;
     padding-bottom: 10px;
 
-    -webkit-animation-name: box-light-lightning;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-play-state: running;
+    /*-webkit-animation-name: box-light-lightning;*/
+    /*-webkit-animation-duration: 5s;*/
+    /*-webkit-animation-timing-function: ease-in-out;*/
+    /*-webkit-animation-play-state: running;*/
 
-    animation-name: box-light-lightning;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-play-state: running;
+    /*animation-name: box-light-lightning;*/
+    /*animation-duration: 5s;*/
+    /*animation-timing-function: ease-in-out;*/
+    /*animation-play-state: running;*/
 }
 
 .challenge-content {
