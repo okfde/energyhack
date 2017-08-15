@@ -56,7 +56,7 @@ body {
     height: 100000px;
     width: 100%;
 
-    -webkit-animation-name: animate-background;
+    /* webkit-animation-name: animate-background;
     -webkit-animation-duration: 5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-play-state: running;
@@ -64,10 +64,10 @@ body {
     animation-name: animate-background;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
-    animation-play-state: running;
+    animation-play-state: running; */ 
 }
 
-@-webkit-keyframes animate-background {
+/* @-webkit-keyframes animate-background {
     0%      {opacity: 0;}
     100.0%  {opacity: 1;}
 }
@@ -88,7 +88,7 @@ body {
     10.0%   {background-color: white;}
     20.0%   {background-color: black;}
 }
-
+*/
 footer {
     /*margin-right: -30px !important;
     margin-left: -30px !important;*/
