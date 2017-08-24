@@ -15,7 +15,7 @@ function initialize() {
 
 	map.addLayer(toner);
 
-	L.marker([52.48126, 13.35612]).addTo(map)
+	L.marker([52.481826, 13.357598]).addTo(map)
 		.bindPopup('InfraLab Berlin')
 		.openPopup();
 }
