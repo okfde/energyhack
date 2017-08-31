@@ -128,6 +128,9 @@ header {
 .morph-section {
 	width: 400px;
 	height: 400px;
+	max-width: 400px;
+	max-height: 400px;
+	line-height: 1em;
 
 	position: absolute;
 	left: 50%;
@@ -136,4 +139,6 @@ header {
 	margin-left: -200px;
 	font-family: monospace;
 	color: #fffe38;
+	overflow: hidden;
+	text-align: center;
 }
