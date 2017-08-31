@@ -86,7 +86,14 @@ h3 {
 	text-align: center;
 }
 
-header h3 {
+.teaser {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #43A047;
+	color: #fff;
+}
+
+.teaser h3 {
 	text-align: center;
 	font-weight: bold;
 }
@@ -115,12 +122,6 @@ footer a {
 	max-width: 95%;
 }
 
-header {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	background-color: #43A047;
-	color: #fff;
-}
 
 .morph-section {
 	width: 400px;
@@ -140,6 +141,49 @@ header {
 	text-align: center;
 }
 
+.nav-item {
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #43A047;
+}
+
+.content .row {
+	padding-top: 10px;
+}
+
+@media (max-width: 934px) {
+	.nav-item {
+		margin-left: 4px;
+		margin-right: 4px;
+		font-size: 0.9em;
+	}
+}
+
+@media (max-width: 780px) {
+	.nav-item {
+		font-size: 0.8em;
+	}
+}
+
+@media (max-width: 700px) {
+	.nav-item {
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 0.7em;
+	}
+}
+
+@media (max-width: 640px) {
+	.nav-item {
+		font-size: 0.6em;
+	}
+}
+
+
 @media (max-width: 576px) {
 	.morph-section {
 		width: 200px;
@@ -155,7 +199,15 @@ header {
 		margin-right: 30px;
 	}
 
-	header {
+	.teaser {
 		padding-top: 0;
 	}
 }
+
+@media (max-width: 534px) {
+	.navbar {
+		display: none !important;
+	}
+
+}
+

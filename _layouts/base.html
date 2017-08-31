@@ -6,15 +6,19 @@
 	<title>{% if page.title %}{{ page.title }} › {% endif %}{{ site.title }}</title>
 	<meta name="description" content="{% if page.desc %}{{ page.desc }}{% endif %}">
 	<link rel="icon" href="assets/favicon/favicon.ico">
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/vendor/leaflet/leaflet.css" rel="stylesheet">
 	<link href="assets/css/main.css" rel="stylesheet">
 	<script src="assets/vendor/leaflet/leaflet.js"></script>
+	<script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="assets/vendor/tether/js/tether.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/js/main.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="100">
 {% include oldbrowsers.html %}
 {% include header.html %}
+{% include teaser.html %}
 <div class="container">{{ content }}</div>
 {% include footer.html %}
 <!--{!--% include piwik.html %}-->
