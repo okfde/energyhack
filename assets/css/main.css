@@ -45,15 +45,7 @@ h3 {
 	font-family: 'Miso Regular', sans-serif;
 }
 
-h1 {
-	font-size: 132px;
-	line-height: 120px;
-	text-align: center;
-	margin-top: 60px;
-	margin-bottom: 60px;
-}
-
-h2 {
+h1, h2 {
 	font-size: 66px;
 	line-height: 60px;
 	text-align: center;
@@ -86,18 +78,6 @@ h3 {
 	text-align: center;
 }
 
-.teaser {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	background-color: #43A047;
-	color: #fff;
-}
-
-.teaser h3 {
-	text-align: center;
-	font-weight: bold;
-}
-
 footer {
 	margin-top: 60px;
 	padding-top: 60px;
@@ -121,7 +101,6 @@ footer a {
 	margin-bottom: 60px;
 	max-width: 95%;
 }
-
 
 .morph-section {
 	width: 400px;
@@ -155,17 +134,56 @@ footer a {
 	padding-top: 10px;
 }
 
+.teaser {
+	padding-top: 60px;
+}
+
+.teaser h1, .teaser h2, .teaser h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.teaser h3 {
+	text-align: center;
+	font-size: 50px;
+	line-height: 60px;
+}
+
+.ascii-art {
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+}
+.ascii-art pre {
+	margin-top: -50px;
+	font-size: 9px;
+	line-height: 1em;
+	display: inline-block;
+	overflow: hidden;
+	color: #43A047;
+	text-align: left;
+	margin-bottom: 0;
+}
+
+
 @media (max-width: 934px) {
 	.nav-item {
 		margin-left: 4px;
 		margin-right: 4px;
 		font-size: 0.9em;
 	}
+	.ascii-art pre {
+		font-size: 8px;
+	}
+
 }
 
 @media (max-width: 780px) {
 	.nav-item {
 		font-size: 0.8em;
+	}
+	.ascii-art pre {
+		font-size: 7px;
 	}
 }
 
@@ -175,14 +193,19 @@ footer a {
 		margin-right: 0;
 		font-size: 0.7em;
 	}
+	.ascii-art pre {
+		font-size: 6px;
+	}
 }
 
 @media (max-width: 640px) {
 	.nav-item {
 		font-size: 0.6em;
 	}
+	.ascii-art pre {
+		font-size: 5px;
+	}
 }
-
 
 @media (max-width: 576px) {
 	.morph-section {
@@ -199,8 +222,8 @@ footer a {
 		margin-right: 30px;
 	}
 
-	.teaser {
-		padding-top: 0;
+	.ascii-art pre {
+		font-size: 4px;
 	}
 }
 
@@ -210,4 +233,3 @@ footer a {
 	}
 
 }
-

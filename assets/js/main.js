@@ -354,7 +354,7 @@ var asciis = [[
 
 function animation() {
 
-	var element = document.querySelector('pre');
+	var element = document.getElementById('morph');
 	AsciiMorph(element, {x: 0, y: 0});
 
 	AsciiMorph.render(asciis[0]);
@@ -375,5 +375,5 @@ function animation() {
 
 document.addEventListener("DOMContentLoaded", function (event) {
 	map();
-	animation();
+	// animation();
 });
