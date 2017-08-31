@@ -149,4 +149,9 @@ header {
 		margin-left: -100px;
 		font-size: 0.4em;
 	}
+
+	#map {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
 }
