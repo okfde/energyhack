@@ -94,13 +94,10 @@ header h3 {
 footer {
 	margin-top: 60px;
 	padding-top: 60px;
+	padding-bottom: 60px;
 	background-color: #43A047;
 	color: #fff;
 	margin-bottom: 0;
-}
-
-footer .row {
-	padding-bottom: 60px;
 }
 
 footer a {
@@ -109,13 +106,13 @@ footer a {
 }
 
 .logo {
-	display: inline-block;
-	width: 32%;
 	text-align: center;
 }
 
 .logo img {
 	max-height: 120px;
+	margin-bottom: 60px;
+	max-width: 95%;
 }
 
 header {
@@ -141,4 +138,15 @@ header {
 	color: #fffe38;
 	overflow: hidden;
 	text-align: center;
+}
+
+@media (max-width: 576px) {
+	.morph-section {
+		width: 200px;
+		height: 200px;
+		max-width: 200px;
+		max-height: 200px;
+		margin-left: -100px;
+		font-size: 0.4em;
+	}
 }
