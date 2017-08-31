@@ -1,0 +1,894 @@
+@font-face {
+    font-family: 'misobold';
+    src: url('../font/miso-bold-webfont.eot');
+    src: url('../font/miso-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/miso-bold-webfont.woff') format('woff'),
+         url('../font/miso-bold-webfont.ttf') format('truetype'),
+         url('../font/miso-bold-webfont.svg#misobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'misolight';
+    src: url('../font/miso-light-webfont.eot');
+    src: url('../font/miso-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/miso-light-webfont.woff') format('woff'),
+         url('../font/miso-light-webfont.ttf') format('truetype'),
+         url('../font/miso-light-webfont.svg#misolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'misoregular';
+    src: url('../font/miso-regular-webfont.eot');
+    src: url('../font/miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/miso-regular-webfont.woff') format('woff'),
+         url('../font/miso-regular-webfont.ttf') format('truetype'),
+         url('../font/miso-regular-webfont.svg#misoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    height:100%;
+    font-family: 'misoregular', sans-serif;
+    background-color: black;
+    background-image: url('../img/bg_night.png');
+    -webkit-animation-name: animate-background-html;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+
+    animation-name: animate-background-html;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left:0;
+    background-image: url('../img/bg_day.png');
+    height: 100000px;
+    width: 100%;
+
+    -webkit-animation-name: animate-background;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+
+    animation-name: animate-background;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+}
+
+@-webkit-keyframes animate-background {
+    0%      {opacity: 0;}
+    100.0%  {opacity: 1;}
+}
+
+@keyframes animate-background {
+    0%      {opacity: 0;}
+    100.0%  {opacity: 1;}
+}
+
+@-webkit-keyframes animate-background-html {
+    0%      {background-color: black;}
+    10.0%   {background-color: white;}
+    20.0%   {background-color: black;}
+}
+
+@keyframes animate-background-html {
+    0%      {background-color: black;}
+    10.0%   {background-color: white;}
+    20.0%   {background-color: black;}
+}
+
+footer {
+    /*margin-right: -30px !important;
+    margin-left: -30px !important;*/
+}
+
+footer a, footer a:hover, footer a:visited, footer a:active, footer a:focus {
+    color: grey;
+    border: none;
+}
+
+footer p {
+    padding: 0;
+}
+
+footer a:visited, footer a:focus {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer > .row {
+    padding-bottom: 20px;
+    color: grey;
+    background-color: #181716;
+}
+
+footer .border {
+    border: 5px solid black;
+    border-bottom: none;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+footer .column-border {
+    border-right: 5px solid black;
+}
+
+footer li {
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer img {
+
+    vertical-align: middle;
+    margin-right: 20px;
+    height: 3.5em;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 33px;
+}
+
+h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+p {
+    padding: 0 20px 20px 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #11110F;
+    border-bottom: 2px solid #FFF;
+
+    -ms-word-break: break-all;
+    word-break: break-all;
+    /* Non standard for webkit */
+    word-break: break-word;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+}
+
+a:hover {
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+    text-decoration: none;
+}
+
+.button a:visited, .button a:focus, .button a:active, .button a:link {
+    text-decoration: none;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+
+.container {
+    position: relative;
+	max-width: 90%;
+    font-size: 25px;
+}
+
+.container > .row {
+    margin-bottom: 50px;
+}
+
+.challenge-wrapper, .challenge-wrapper .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.box {
+    border: 3px solid rgb(51, 51, 51);
+}
+
+.box h1 {
+    padding: 0 0 0 0;
+    margin: 5px;
+}
+
+.box-schedule {
+    height: 11em;
+    padding-top: 10px;
+    border-left: 3px solid white;
+}
+
+.data-boxes .box-schedule {
+    border-bottom: 3px solid white;
+}
+
+.box-schedule-first {
+    border-left: none;
+}
+
+.data-content {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.box-header-left {
+    border-bottom: none;
+    /*border-right: none;*/
+    float: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.box-header h1 {
+    font-size: 30px;;
+}
+
+.box-header {
+    border-bottom: none;
+    /*border-right: none;*/
+    float: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.box-header-right {
+    border-bottom: none;
+    border-left:none;
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0px;
+    padding-bottom: 10px;
+
+}
+
+.box-light {
+    background-color: #FFEC00;
+    border-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    -webkit-animation-name: box-light-lightning;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+
+    animation-name: box-light-lightning;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+}
+
+.challenge-content {
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.box-content h2, .box-content ul, .box-content h1 , .box-content h3, .box-content h4 {
+    padding-left: 20px;
+}
+
+.box-content .thumbnail-list li {
+    padding-left:0;
+}
+
+.box-light li {
+    padding-left: 20px;
+}
+
+.button h1{
+    margin-bottom: 10px;
+}
+
+.button:hover {
+
+    border: 3px solid white;
+    color: #FFEC00;
+}
+
+.registration {
+    color: black;
+    text-shadow:  1px  1px 1px #FFEC00,
+                  1px -1px 1px #FFEC00,
+                 -1px  1px 1px #FFEC00,
+                 -1px -1px 1px #FFEC00;
+    font-size: 100px;
+}
+
+.registration:hover {
+    color: #FFEC00;
+    text-shadow:  1px  1px 1px black,
+                  1px -1px 1px black,
+                 -1px  1px 1px black,
+                 -1px -1px 1px black;
+}
+
+.itemization {
+   list-style: none;
+   margin-left: 0;
+   padding-left: 1em;
+   text-indent: -0.62em;
+}
+
+.results h2 {
+    font-size: 30pt;
+}
+
+.results h4 {
+    font-size: 20pt;
+}
+
+.results img, .results figcaption {
+    display: block;
+    margin: 0 auto;
+}
+
+.results figcaption {
+    font-size: 14pt;
+    text-align: center;
+}
+
+.tw-widget {
+    margin-left: 15px;
+}
+
+.project p {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.results p {
+    padding-bottom: 5px;
+}
+
+#twitter-widget-0 {
+    margin: auto;
+}
+
+.impulse-img {
+    max-height: 400px;
+}
+
+.itemization li:before{
+    content:"- ";
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.box-light-start {
+    background-color: black;
+}
+
+.workshop img {
+    display: block;
+    margin-bottom:10px;
+    padding: 0 15px;
+    width:100%
+}
+
+@-webkit-keyframes box-light-slow {
+    0%      {background-color:black; border-color: rgb(51, 51, 51);}
+    100.0%  {background-color:#FFEC00; border-color: white;}
+}
+
+@keyframes box-light-slow {
+    0%      {background-color:black; border-color: rgb(51, 51, 51);}
+    100.0%  {background-color:#FFEC00; border-color: white;}
+}
+
+@-webkit-keyframes box-light-lightning {
+    0%      {background-color:black; border-color: rgb(51, 51, 51);}
+    29%     {background-color:black; border-color: rgb(51, 51, 51);}
+    30%     {background-color:white; border-color: white;}
+    35%     {background-color:black; border-color: black;}
+    100.0%  {background-color:#FFEC00; border-color: white;}
+}
+
+@keyframes box-light-lightning {
+    0%      {background-color:black; border-color: rgb(51, 51, 51);}
+    29%     {background-color:black; border-color: rgb(51, 51, 51);}
+    30%     {background-color:white; border-color: white;}
+    35%     {background-color:black; border-color: black;}
+    100.0%  {background-color:#FFEC00; border-color: white;}
+}
+
+@-webkit-keyframes box-light-blackout {
+    0%      {background-color:black; border-color: rgb(51, 51, 51);}
+    28%      {background-color:black; border-color: rgb(51, 51, 51);}
+    30%     {background-color:white; border-color: white;}
+    32%     {background-color:black; border-color: black;}
+    34%     {background-color:white; border-color: white;}
+    100.0%  {background-color:#FFEC00; border-color: white;}
+}
+
+@keyframes box-light-blackout {
+    0%      {background-color:black; border-color: rgb(51, 51, 51);}
+    28%      {background-color:black; border-color: rgb(51, 51, 51);}
+    30%     {background-color:white; border-color: white;}
+    32%     {background-color:black; border-color: black;}
+    34%     {background-color:white; border-color: white;}
+    100.0%  {background-color:#FFEC00; border-color: white;}
+}
+
+.box-dark {
+    background-color: black;
+    border-color: black;
+    color: #FFEC00;
+
+    /*-webkit-animation-name: box-dark-animation;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+
+    animation-name: box-dark-animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;*/
+}
+
+.box-dark-start {
+    background-color: black;
+}
+
+@-webkit-keyframes box-dark-animation {
+    0%     {color:rgb(51, 51, 51); border-color: rgb(51, 51, 51);}
+    100.0%  {color:#FFEC00; border-color: black;}
+}
+
+@keyframes box-dark-animation {
+    0%     {color:rgb(51, 51, 51); border-color: rgb(51, 51, 51);}
+    100.0%  {color:#FFEC00; border-color: black;}
+}
+
+.challenge-text {
+    padding-right : 0;
+}
+
+.challenge-number {
+    padding-left: 0;
+}
+
+.challenge-row {
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.img-header {
+    width: 100%;
+}
+
+#quotes .row-fluid:first-child {
+    margin-bottom: 20px;
+}
+
+.social-media {
+    margin: 0;
+}
+
+.social-media li {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+.social-media li a {
+    font-family: 'misobold', sans-serif;
+    padding: 2px 20px;
+    background: #FFEC00;
+    font-size: 1.2em;
+    color: #3D3D3F;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+}
+.social-media li a:hover {
+    text-decoration: none;
+}
+
+#teaser {
+    margin-bottom: 50px;
+}
+
+#teaser h1 {
+    margin: 0;
+    font-size: 10em;
+    text-transform: uppercase;
+    padding: 20px 20px 0;
+    line-height: 0.8em;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'misobold',sans-serif;
+}
+
+#teaser h1 span.lightning{
+    background-image: url('../img/strom_icon.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 120px;
+}
+
+#teaser h2 {
+    margin: 0;
+    font-family: 'misolight', sans-serif;
+    font-size: 4em;
+    text-transform: uppercase;
+    line-height: 0.9em;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+#teaser h3 {
+    margin: 0;
+    font-size: 7em;
+    text-transform: uppercase;
+    padding: 0 0 15px;
+    line-height: 0.8em;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'misolight',sans-serif;
+    }
+
+.heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 5px 20px;
+    display: inline-block;
+}
+
+.thumbnail {
+    margin-bottom: 0;
+}
+
+.oculus-rift {
+    object-position: 0 0;
+}
+
+.thumbnail-list figure {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.thumbnail-list figcaption {
+    font-size: 18px;
+}
+
+
+
+.skills {
+    margin-bottom: 0 !important;
+}
+
+.bulletlist {
+    list-style-type: square;
+    font-size: 1.5em;
+    padding: 0 20px;
+}
+
+.bulletlist li {
+    padding: 10px 0;
+}
+
+#challenges .heading {
+    display: block;
+}
+
+
+
+.contact-area {
+    margin-top: 2em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+.contact-area a {
+    color: #fff;
+}
+
+.contact-area p {
+    padding: 0;
+}
+
+.spaceless {
+    margin: 0;
+}
+
+.logo-snb {
+    height: 4em;
+}
+
+.logo-senwtf {
+    height: 1.3em;
+}
+
+.logo-smartb {
+    height: 1.3em;
+}
+
+.logo-kki {
+    height: 4em;
+}
+
+.logo-cardboard {
+    height: 2em;
+}
+
+.logo-tacitDimension {
+    height: 1.3em;
+}
+
+.logo-tsb {
+    height: 2.3em;
+}
+
+#register:after{
+    content: "\2014> Jetzt anmelden <\2014";
+}
+
+#register a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 3.75em;
+    text-transform: uppercase;
+    line-height: 1.1em;
+    margin-bottom: 50px;
+}
+
+#about, #video, .review {
+    padding: 20px 0 0 0;
+    margin-bottom: 50px;
+}
+
+#about a:after {
+    content: " >";
+}
+
+#map {
+    height: 350px;
+    margin-top: 10px;
+}
+
+#location {
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+#schedule {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#schedule p {
+    padding: 20px 5px;
+    font-size: 1.5em;
+}
+
+.signup {
+    margin: 20px 0;
+}
+
+.signup .button:hover {
+    background-color: black;
+}
+
+.banner {
+    font-size: 3em;
+    padding-top: 28px;
+}
+
+.banner .red {
+    color: red;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+#switch {
+    display: inline-block;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: -35px;
+    width: 88px;
+    border: none;
+}
+
+.js-hidden {
+    display: none;
+}
+
+#schedule .span2 {
+    margin: 0;
+    width: 145px;
+    min-height: 235px;
+}
+
+.thumbnail-list li {
+    float: left;
+    margin-right: 10px;
+}
+
+.thumbnail {
+    opacity: 1.0;
+    width: 200px;
+    height: 150px;
+    padding: 0;
+    object-fit: cover;
+    -webkit-animation-name: thumbnail-image-animation;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+
+    animation-name: thumbnail-image-animation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+}
+
+.prize-thumbnail {
+    background-color: black;
+    color: #FFEC00;
+    /*border: 4px solid white;*/
+    height: 6em;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prize-thumbnail p {
+    padding: 0 10px;
+}
+
+.pricebox {
+    margin-top: 20px;
+}
+
+.envideo {
+    width:100%;
+    height: 640px;
+    margin: auto;
+}
+
+.envideo iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@-webkit-keyframes thumbnail-image-animation {
+    0%     {opacity:0.2;}
+    100.0%  {opacity:1.0;}
+}
+
+@keyframes thumbnail-image-animation {
+    0%     {opacity:0.2;}
+    100.0%  {opacity:1.0;}
+}
+
+.leaflet-popup-content {
+    color: black;
+}
+
+@media (max-width: 1200px) {
+    .box-schedule {
+        height: 15em;
+    }
+}
+
+@media (max-width: 991px) {
+    .box-schedule {
+        border-left: none;
+        border-top: 3px solid white;
+        height: 4em;
+        text-align: center;
+    }
+
+    .box-schedule-first {
+        border: none;
+    }
+}
+
+@media (max-width: 1050px) {
+    #register:after{
+        content: "Jetzt anmelden";
+    }
+}
+
+@media (max-width: 418px) {
+    #register:after{
+        font-size: 70px;
+    }
+
+    .envideo {
+        height: 300px;
+    }
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    
+    #register {
+        /*font-size: 35px;*/
+    }
+
+    .styleswitch {
+        visibility: hidden;
+    }
+
+    .social-media li a {
+        padding: 2px 10px;
+    }
+
+    .container {
+        max-width: 98%;
+    }
+
+    footer .column-border {
+        border-bottom: 5px solid black;
+    }
+}
+
+@media (max-width: 991px) {
+    .challenge-wrapper {
+        display: block;
+    }
+}

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="de"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Energiedaten hacken! › EnergyHack Berlin</title>
+	<meta name="description" content="Energiewende hacken! Der Open-Data Energy-Hackday in Berlin macht die Stromversorgung und das Stromnetz besser verständlich und greifbar.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="default-style" content="day">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/day.css" title="day">
+	<link rel="stylesheet" href="css/night.css" title="night">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="js/styleswitcher.js"></script>
+	<link rel="stylesheet" href="css/leaflet.css">
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="css/leaflet.ie.css">
+	<![endif]-->
+</head>
+<body onLoad="initialize()">
+<div class="row color3 banner">
+	<div class="span12 text-center text-uppercase">
+		<p class="text-uppercase"><span class="red">NEU:</span> Nächster Hackthon am 22. und 23. September 2017 im infralab Berlin</p>
+	</div>
+</div>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> or <a href="https://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+	improve your experience.</p>
+<![endif]-->
+<div class="wrapper">
+	<div class="bg"></div>
+	<div class="container">
+		<header class="row social-media">
+			<ul>
+				<li><a href="https://twitter.com/EnergyHackB">Twitter</a></li>
+				<li><a href="https://github.com/okfde/energyhack">GitHub</a></li>
+				<li><a href="../2013">2013</a></li>
+				<li><a href="..">Aktuell</a></li>
+			</ul>
+		</header>
+		<div id="teaser" class="row">
+    <div class="col-md-12 nopadding">
+    	<img class="img-header" src="img/header.png" alt="Energyhack 2015 Reloaded" />
+        <!-- <h1>Energy<span class="lightning">Hack</span></h1>
+        <h2>Apps für die Energie der Zukunft</h2>
+        <h3>14.10.2015 Berlin</h3> -->
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+      <div class="row">
+        <div class="box box-header box-light">
+            <h1 class="text-uppercase">Ergebnisse</h1>
+        </div>
+      </div>
+      <div class="row box box-light">
+        <div class="col-md-12 results">
+          <h2>So war der Energyhack Reloaded!</h2>
+          <p>
+            <img src="https://okfn.de/files/blog/2015/11/ehr-intro.jpg" alt="">
+          </p>
+
+          <p><strong> Blackout und Krisenvorsorge </strong> - mit diesen zwei zentralen Themen beschäftigten sich letzten Samstag, am 14. November 2015 in Berlin, 30 Open Data- und Energie-Expert/innen beim Energyhack Reloaded.</p>
+
+          <p><strong><a href="https://energyhack.de/">Energyhack Reloaded</a></strong> ist der zweite Hackday zum Thema Energieversorgung, durchgeführt von der Open Knowledge Foundation Deutschland und Stromnetz Berlin in Kooperation mit u.a. der Senatsverwaltung für Wirtschaft, Technologie und Forschung sowie dem Förderverein Freie Netzwerke e.V..</p>
+
+          <p>Ziel des Hackdays war es, in einem experimentellen Rahmen Projektideen zu entwickelt, um die Gesellschaft stärker für die Themen zu sensibilisieren und Anwendungen für den Ernstfall zu entwickeln. Die Projekte und Diskussionen zwischen den Entwickler/innen und Energie-Expert/innen sollten zu neuen Anregungen für innovative Lösungsansätze führen.</p>
+
+          <p>Deutschlandradio berichtete ausführlich in der Sendung Computer und Kommunikation über den Hackday mit offenen Energiedaten. [Reinhören lohnt sich!] (https://soundcloud.com/dlf-wissenschaft/apps-furs-e-werk-der-energy-reloaded-hackathon-in-berlin) (Dauer: 20min)</p>
+
+          <a id="readmore" href="#" title="">Weiterlesen</a>
+
+          <div id="more" class="js-hidden">
+            <div class="tw-widget">
+              <blockquote class="twitter-tweet" lang="th"><p lang="de" dir="ltr">Apps fürs E-Werk <a href="https://t.co/cJ6lfdyXt4">https://t.co/cJ6lfdyXt4</a> <a href="https://twitter.com/DLF">@DLF</a> Sdg. v. Energy-Reloaded <a href="https://twitter.com/hashtag/Hackathon?src=hash">#Hackathon</a> <a href="https://twitter.com/hashtag/stromnetzberlin?src=hash">#stromnetzberlin</a>     <a href="https://twitter.com/EnergyHackB">@EnergyHackB</a> <a href="https://t.co/Uy8Z4ckP3M">pic.twitter.com/Uy8Z4ckP3M</a></p>&mdash; Wissenschaft (@DLF_Forschung) <a href="https://twitter.com/DLF_Forschung/status/666150812285038593">16 พฤศจิกายน 2015</a></blockquote>
+            </div>
+            <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <h4>Kick-Off und Impulse</h4>
+            <p>Zu Beginn des Tages ging es darum, zu verstehen, wodurch ein Stromausfall entstehen kann und wie die Energieversorgung bspw. in Berlin aufgebaut ist. Die größten gesellschaftlichen Herausforderungen bei einem Stromfall umfassen den Austausch von Informationen und lebensnotwendigen Ressourcen sowie das Zusammenbrechen bestehender Infrastrukturen.</p>
+
+            <p>
+              <figure>
+                <img class="impulse-img" src="https://okfn.de/files/blog/2015-11/ehr-impulse.jpg" title="Impulsreferate" alt="Hackday"><br />
+                <figcaption>
+                  Einleitende Worte von: oben: Thomas Schäfer (SNB), Cornel Pampu (SenWTF), unten: Stephan Boy (KKI), Monic Meisel (Freifunk), CC-BY Leonard Wolf, Energyhack Reloaded
+                </figcaption>
+              </figure>
+
+            </p>
+
+            <h4>Projekte und Gewinner/innen</h4>
+
+
+            <p>Sechs Projekte wurden im Laufe des Tages entwickelt und von unserer Jury prämiert.
+            In der Jury saßen: Elektra Wagenrad (Freifunk), Kristina Klein (OKFDE), Thomas Schäfer (SNB). Gewonnen haben: DistMsg (most technical, most energetic), SMS Gateway 3000 sowie Wie Lange Denn Jetzt? (Sonderpreis), Trinkwassernotbrunnen (best design).</p>
+
+            <p>An dieser Stelle stellen sich die Projekte kurz alphabetisch selbst vor. Sie können auch im <a href="https://hackdash.org/dashboards/energyhack">Hackdash verfolgt werden</a>.</p>
+            <p>
+            <figure>
+              <img src="https://okfn.de/files/blog/2015-11/ehr-impressionen.png" title="Impressionen" alt="Hackday"><br />
+              <figcaption>Eindrücke des Hackdays, CC-BY Leonard Wolf, Energyhack Reloaded</figcaption>
+            </figure>
+
+            </p>
+            <div class="row project">
+              <div class="col-md-4">
+                <p>
+                <figure class="project-figure">
+                  <img src="https://okfn.de/files/blog/2015-11/ehr-blackout-crate.png" title="Blackout Crate" alt="Hackday">
+                  <figcaption>CC-BY Dierk Eichel, Energyhack Reloaded</figcaption>
+                </figure>
+              </p>
+              </div>
+
+              <div class="col-md-8">
+                <h4>01 Blackout Crate</h4>
+                <p>Blackout Crate ist ein Survival Kit für Technik-Nerds, das sich aus Leuchtstäben, Astronautennahrung und u.a. einer Anleitung dafür, wie man sich gegen Zombies behaupten kann, zusammensetzt.</p>
+              </div>
+            </div>
+            <div class="row project">
+              <div class="col-md-4">
+                <p>
+                  <figure>
+                    <img src="https://okfn.de/files/blog/2015-11/ehr-distmsg.png" title="DistMsg" alt="Hackday">
+                    <figcaption>CC-BY Ansgar Schmidt, Pascal Esemann, Tobias Krischer, Anth0rx, Energyhack Reloaded</figcaption>
+                  </figure>
+                </p>
+              </div>
+              <div class="col-md-8">
+                <h4>02 DistMsg</h4>
+                <p>Wie kann man untereinander bei einem Stromausfall in Kontakt bleiben und Ressourcen, die man zur Verfügung hat, tauschen?</p>
+
+                <p>
+                  Hier ist das Projektszenario:
+                  Just the first hours after the power went off. A normal cow farm outside of Berlin. Several hundred cows and only 5 people taking care on the farm. Normally everything is hightly automated with ID tags and computer optimized feeding and milking systems. But without power the cows needs to be milked every single day or they die. The farmer uses our app on his mobile to write a "Help me to milk the cows and you get free food" broadcast message. 5 minutes later a car stops on the way to a hospital and the the driver buys milk. Without any interaction both mobiles exchanges the massages and the driver continues his way to the hospital. On his way he meets several other people and each time he spread out the massage. Arriving at the hospital he connects with the hostital DistMsg system. This acts as some kind of backbone and transport the massage via satelite, Hamradio, freifunk, you-name-it to other hubs. The message is broadcasted to 1000 of people within a very short time and hopefully also reaches several people with milking-skill.
+                </p>
+              </div>
+            </div>
+
+
+          <div class="row project">
+            <div class="col-md-4">
+              <p>
+              <figure>
+                <img src="https://okfn.de/files/blog/2015-11/ehr-3d-energie.png" title="3D Energie-Daten" alt="Hackday">
+                <figcaption>CC-BY Thomas Tursics, Energyhack Reloaded</figcaption>
+              </figure>
+            </p>
+            </div>
+            <div class="col-md-8">
+              <h4>03 3D Energie-Daten</h4>
+              <p>Dieses Projekt nutzt Daten des Berliner 3D-Modells und ermittelt den unterschiedlichen Stromverbrauch von Stadtgebäuden, Bezirken und der gesamten Stadt. Zur Visualisierung werden Livedaten von Stromnetz Berlin genutzt.</p>
+
+              <p>Mit einem Cardboard könnte ein/e Nutzer/in auf diese Weise die Stadt aus einer Verbrauchsperspektive erkunden und gleichzeitig mehr darüber erfahren, wo und wie viel Strom am Tag verbraucht wird. Das Projekt macht Stromverbrauch nachvollziehbar.</p>
+
+              <p><a href="http://kiez-karte.berlin/cardboard">Demo:</a></p>
+            </div>
+          </div>
+
+          <div class="row project">
+            <div class="col-md-4">
+              <p>
+                <figure>
+                  <img src="https://okfn.de/files/blog/2015-11/ehr-sms-gateway.jpg" title="SMS Gateway 3000" alt="Hackday">
+                  <figcaption>CC-BY Marc Rentschler, Viktor Bedö, Energyhack Reloaded</figcaption>
+                </figure>
+              </p>
+            </div>
+            <div class="col-md-8">
+              <h4>04 SMS Gateway 3000</h4>
+
+              <p>Use SMS Gateway to connect yourself to others via SMS when internet is already down but when there still is GSM available.</p>
+
+              <p>Post offers and requests of things needed during the blackout e.g. candles. On a server which is not affected by blackout algorithms match the requests and offers and connect the people to each other by sending them meeting locations and phone numbers. In addition server-side algorithms broadcast the SMS's content to internet services like Twitter so that people from outside the blackout are also connected and can help.</p>
+            </div>
+          </div>
+          <div class="row project">
+            <div class="col-md-4">
+              <p>
+              <figure>
+                <img src="https://okfn.de/files/blog/2015-11/ehr-trinkwassernotbrunnen.png" title="Trinkwassernotbrunnen" alt="Hackday">
+                <figcaption>CC-BY Knut Hühne, Energyhack Reloaded</figcaption>
+              </figure>
+            </p>
+            </div>
+            <div class="col-md-8">
+              <h4>05 Trinkwassernotbrunnen</h4>
+
+              <p>Wenn der Strom weg ist brauchen wir Wasser. In Berlin haben wir zum Glück Trinkwassernotbrunnen, an denen die Bürger/innen selbst Wasser pumpen können.</p>
+
+              <p>Die Karte nutzt die Voronoi-Darstellung, um die Einzugsgebiete der Berliner Trinkwasernotbrunnen darzustellen.
+              Die erste Version besteht schon, zwei Schritte sollen noch Folgen: - das Einfärben der Polygone je nach Fläche, die sie versorgen - die Konvertierung und Einbindung der Daten vom Bezirksamt Friedrichshain/Kreuzberg</p>
+            </div>
+          </div>
+          <div class="row project">
+            <div class="col-md-4">
+              <p>
+                <figure>
+                  <img src="https://okfn.de/files/blog/2015-11/ehr-wie-lange.png" title="Wie lange denn jetzt?" alt="Hackday">
+                  <figcaption>CC-BY Sebastian Reck, Energyhack Reloaded</figcaption>
+                </figure>
+              </p>
+            </div>
+            <div class="col-md-8">
+              <h4>06 Wie Lange Denn Jetzt?</h4>
+              <p>Wie praktisch wäre es, wenn mir mein Telefon in den letzten Sekunden stabiler Infrastruktur die nötigen Informationen darüber aufbereiten könnte, wie lange ich mich ohne Strom bespaßen müsste? Wie steht es um Familien mit Kindern oder Personen, die auf eine beheimatete medizinische Versorgung angewiesen sind?</p>
+
+              <p>Das Stichwort ist wohl Risikoabschätzung. Keiner kann garantieren, dass der Strom nach einer bestimmten Zeit wieder da ist, aber mit einer gewissen Wahrscheinlichkeit kann zumindest davon ausgegenagen werden. Anhand dieser Information können, zu Beginn des Wegfalls der Infrastruktur, Entscheidungen getroffen werden, die den Verlauf bis zur Reaktivierung bestimmen.</p>
+
+              <p>Die Vermeidung von Panik sollte, aufgrund weggefallener Informationskanäle, zumindest angestrebt werden. Annahme: Bei einem 24h Stromausfall, verhalten sich die betroffenen Bürger ruhiger (länger ruhig), wenn Sie am Anfang der Periode über die (approximierte) Dauer informiert werden.</p>
+            </div>
+          </div>
+          <div class="row">
+            <hr>
+
+            <p>Alle Fotos vom Energyhack Reloaded kann man sich <a href="https://www.flickr.com/photos/okfde/albums/72157661134814526">hier anschauen</a>. Großes Danke an unseren Fotografen, Leonard Wolf.</p>
+
+            <p>Wir bedanken uns bei allen Teilnehmenden für die spannenden Ideen und den schönen Hackday!</p>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="box box-header box-light">
+                <h1 class="text-uppercase">About</h1>
+            </div>
+        </div>
+        <div class="row box box-light">
+            <div class="col-md-12">
+                <p>
+                    Deutschland ist ein Land mit einer überdurchschnittlich guten Versorgungssicherheit. Wenig Grund – möchte man meinen – sich Gedanken um Versorgungsengpässe oder gar Blackouts zu machen. Was viele jedoch nicht wissen: In der Vergangenheit haben starke Schneestürme oder Kurzschlüsse im Stromnetz in Teilen der Bundesrepublik zu mehrtägigen Stromausfällen mit der Folge von ausfallenden Kommunikationsmöglichkeiten und dem Ausfall lebensnotwendiger Versorgungsinfrastrukturen geführt.
+                </p>
+                <p>
+                    Mit “Energyhack Reloaded”, der zweiten Reihe der Hacks zum Thema Energieversorgung, wollen wir uns überlegen, welche Anwendungen und Geräte zur Sensibilisierung des Themas Versorgungssicherheit in der Gesellschaft beitragen könnten. Wie lassen sich Stromausfälle simulieren? Welche Tools und Services könnten im Falle eines plötzlichen Stromausfalls nützlich sein? Wie könnten diese Tools auch in anderen Krisensituationen eingesetzt werden, wo es an einer Grundversorgung mangelt?
+                </p>
+                <p>
+                    Der Hackday mit dem Themenfokus “Blackout” hat zum Ziel kreativen Freiraum für Experimente und Anwendungen rund um das Thema Energieversorgung zu bieten und damit die Entstehung von neuen Ideen und kreativen Lösungen zu fördern.
+                </p>
+                <p>
+                    Wer ein Radio Batch des CCCamp15 und eine Umsetzungsidee hat, gern mitbringen.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="box box-header box-light">
+                <h1 class="text-uppercase">Review</h1>
+            </div>
+        </div>
+        <div class="row box box-light">
+            <div class="col-md-12">
+                <div class="envideo">
+                    <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/A8QCDDAPSwI?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="challenges" class="row challenge-wrapper">
+    <div class="col-md-5 challenge-row">
+        <div class="row">
+            <div class="box box-header box-header-left box-light">
+                <h1 class="text-uppercase">Challenge</h1>
+            </div>
+            <div class="box box-header box-header-right box-light">
+                <h1 class="text-center">1</h1>
+            </div>
+        </div>
+        <div class="row box box-light box-content challenge-content">
+             <div class="col-md-12">
+                <h3>1. Vor dem Blackout: Sensibilisierung</h3>
+                <p>
+                    Wie entsteht ein Blackout und welche Ausbreitung hat er? Wie könnte ein Stromausfalltraining aussehen, um Verbraucher/innen auf einen Stromausfall vorzubereiten? Wie könnte man sich in der Stadt orientieren?
+                </p>
+
+
+               <h4>Gesucht:</h4>
+               <p>Hardware-, Software-Anwendungen und Games, die auf einen Blackout vorbereiten</p>
+
+
+
+                <p style="margin-bottom: 0; padding-bottom:0"><strong>Inspirationen:</strong></p>
+                <ul class="thumbnail-list">
+                    <li>
+                        <figure class="thumbnail-challenge">
+                            <a href="https://www.oculus.com/en-us/">
+                                <img class="thumbnail oculus-rift" src="img/challenges/1-oculus-rift.jpg" alt="Oculus Rift">
+                            </a>
+                            <figcaption>Oculus Rift</figcaption>
+                        </figure>
+                        </li>
+                    <li>
+                        <figure class="thumbnail-challenge">
+                            <a href="http://exit-game.de/de/spiel">
+                                <img class="thumbnail" src="img/challenges/2-exit-game.png" alt="Exit Game">
+                            </a>
+                            <figcaption>Exit Game</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="thumbnail-challenge">
+                            <a href="http://energy.publicdata.eu/ee/vis.html">
+                                <img class="thumbnail" src="img/challenges/3-energy-dependency.png" alt="Energy Dependency Visualization">
+                            </a>
+                            <figcaption>Energy Dependency Visualization</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="thumbnail-challenge">
+
+                                <img class="thumbnail" src="img/challenges/deineidee.png" alt="Deine Idee">
+
+
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-offset-2 col-md-5 challenge-row">
+         <div class="row">
+            <div class="box box-header box-header-left box-light">
+                <h1 class="text-uppercase">Challenge</h1>
+            </div>
+            <div class="box box-header box-header-right box-light">
+                <h1 class="text-center">2</h1>
+            </div>
+        </div>
+
+        <div class="row box box-light box-content challenge-content">
+            <div class="col-md-12">
+                <h3>2. Während des Blackouts: Crisis Response / Notfallservices </h3>
+                <p>
+                    Welche Services kann man anbieten, um auf die Bedürfnisse der Betroffenen zu reagieren. Welche Notfall-Kommunikationssysteme und Adhoc-Netzwerke können die Information und Kommunikation zwischen Bürger/innen und den Katastropenschützer/innen sicherstellen? Wie könnten Tools auch in anderen Krisensituationen (z.B. bei Flüchtlingsfragen) eingesetzt werden, wo es an einer Grundversorgung mangelt?
+                </p>
+                <h4>Gesucht:</h4>
+                <p>Visualisierungen (für den öffentlichen Raum) und Apps für Bürger/innen</p>
+                <p style="margin-bottom: 0; padding-bottom:0"><strong>Inspirationen:</strong></p>
+                <ul class="thumbnail-list">
+                    <li>
+                        <figure class="thumbnail-challenge">
+                            <a href="https://itunes.apple.com/us/app/scanner-radio-deluxe/id498405045 ">
+                                <img class="thumbnail" src="img/challenges/6-eatx.png" alt="Eat Exchange">
+                            </a>
+                            <figcaption>Eat Exchange</figcaption>
+                        </figure>
+                        </li>
+                    <li>
+                        <figure class="thumbnail-challenge">
+                            <a href="https://itunes.apple.com/us/app/cb-radio-box/id512090426">
+                                <img class="thumbnail" src="img/challenges/5-radio-box.png" alt="CB Radion Box">
+                            </a>
+                            <figcaption>CB Radio Box</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="thumbnail-challenge">
+                            <a href="http://www.greenhackathon.com/2014/eatx-stockholm/">
+                                <img class="thumbnail" src="img/challenges/4-scanner-radio.png" alt="Scanner Radio Delux">
+                            </a>
+                            <figcaption>Scanner Radio Delux</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure class="thumbnail-challenge">
+                                <img class="thumbnail" src="img/challenges/deineidee.png" alt="Deine Idee">
+                        </figure>
+                    </li>
+                </ul>
+           </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="box box-header box-light">
+                <h1 class="text-uppercase">Anmeldung</h1>
+            </div>
+        </div>
+        <div class="row box box-light">
+            <div class="col-md-12">
+                <div class="row">
+                    <p>
+                        Ihr seid Softwareentwickler/innen, hackt Hardware, beschäftigt euch mit Design oder habt gute Ideen wie sich komplexe Themen gut kommunizieren lassen? Dann:
+                    </p>
+                </div>
+                <div class="row review box box-dark button signup">
+                    <a href="https://www.eventbrite.de/e/energy-hack-reloaded-tickets-6830970617">
+                        <h1 class="text-uppercase text-center registration" id="register"></h1>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="box box-header box-light">
+                <h1 class="text-uppercase">Daten</h1>
+            </div>
+        </div>
+        <div class="row box box-light nopadding">
+            <div class="row">
+                <div class="col-md-12 data-boxes">
+                    <div class="col-md-2 box-schedule box-schedule-first">
+                        <p><a href="http://insideenergy.org/2014/08/18/data-explore-15-years-of-power-outages/" target="_blank">Stromausfälle in den USA</a></p>
+                    </div>
+                    <div class="col-md-2 box-schedule">
+                        <p><a href="http://www.netzdaten-berlin.de/web/guest/suchen/-/details/web-service-last-und-erzeugung-berlin" target="_blank">Stromlast und -erzeugung in Berlin</a></p>
+                    </div>
+                    <div class="col-md-2 box-schedule">
+                        <p><a href="http://www.netzdaten-berlin.de/suchen/-/details/daten-ausfall-uw-gruppe-fur-energyhack-2015">Testdatensätze zur Simulation von Stromausfällen (Beispiel: UW-Gruppe)</a></p>
+                    </div>
+                    <div class="col-md-2 box-schedule">
+                        <p><a href="https://github.com/smartB-energy/smartb-data" target="_blank">Strom&shy;verbrauch von SmartB für fast ein Jahr</a></p>
+                    </div>
+                    <div class="col-md-2 box-schedule">
+                        <p><a href="https://offenedaten.de/dataset/synthetisches-lastprofil-eines-typischen-haushalts" target="_blank">Synthetische Lastprofile</a></p>
+                    </div>
+                    <div class="col-md-2 box-schedule">
+                        <p><a href="http://enipedia.tudelft.nl/wiki/Portal:Power_Plants" target="_blank">Daten zu Kraftwerken weltweit</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row data-content">
+                <p>Daten für den Hackday sammeln und vervollständigen wir <a href="https://docs.google.com/document/d/1-eAXxLBk3stw_NVdXLXKvGltgUpmHDjvQb1YRSAwskU/edit?usp=sharing">hier</a>. Kennt ihr weitere nützliche Daten? - Dann fügt sie einfach hinzu.</p>
+                <p>
+                    Hie haben wir ein <a href="https://pad.okfn.org/p/Energyhack_Reloaded">Etherpad</a> für erste Ideen eingerichtet.
+                </p>
+                <p>
+                    In diesem <a href="https://hackdash.org/dashboards/energyhack">Hackdash</a> können während des Hackathons die konkreten Projektideen eingepflegt werden.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="box box-header box-light">
+                <h1 class="text-uppercase">Preise</h1>
+            </div>
+        </div>
+        <div class="row box box-light">
+            <div class="col-md-12 pricebox">
+                <ul>
+                    <li class="col-md-3">
+                        <div class="prize-thumbnail">
+                            <p>Arduino- und Raspberry PI-Sets</p>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="prize-thumbnail">
+                            <p>Schwarzlicht-Minigolf</p>
+                        </div>
+                    </li>
+            	   <li class="col-md-3">
+                        <div class="prize-thumbnail">
+                            <p>Buchpaket: Blackout, Der Marsianer, O’Reilly-Gutschein</p>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="prize-thumbnail">
+                            <p>Survivalkit mit u.a. LED-Stirnlampen und Akkupacks</p>
+                        </div>
+                    </li>
+            	</ul>
+            </div>
+            <div class="col-md-12">
+                <p>
+                    Diese Preise werden in den Kategorien “most technical”, “best design”, “funniest hack” und "most energetic" vergeben. Unter allen Teilnehmenden verlosen wir <strong>2 Tickets zum Chaos Communication Congress</strong>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="box box-header box-light">
+                <h1 class="text-uppercase">Location</h1>
+            </div>
+        </div>
+        <div class="row box box-light">
+            <div class="col-md-12">
+        		<h4>Impact Hub Berlin I Friedrichstrasse 246 I 10969 Berlin-Kreuzberg</h4>
+        		<div id="map"></div>
+        	</div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="box box-header box-light">
+                <h1 class="text-uppercase">Schedule</h1>
+            </div>
+        </div>
+        <div class="row box box-light nopadding">
+            <div class="col-md-12 nopadding">
+                <div class="col-md-2 box-schedule box-schedule-first">
+                    <p><span class="clock"></span>11:00<br />Begrüßung</p>
+                </div>
+                <div class="col-md-2 box-schedule">
+                    <p><span class="clock"></span>11:15<br />Impuls-Vorträge</p>
+                </div>
+                <div class="col-md-2 box-schedule">
+                    <p><span class="clock"></span>12:00<br />Projektpitches</p>
+                </div>
+                <div class="col-md-2 box-schedule">
+                    <p><span class="clock"></span>13:00<br />Mittagessen &amp; Hacken</p>
+                </div>
+                <div class="col-md-2 box-schedule">
+                    <p><span class="clock"></span>19:30<br />Präsentationen und Preisverleihung</p>
+                </div>
+                <div class="col-md-2 box-schedule">
+                    <p><span class="clock"></span>0:00<br />Ende</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="box box-header box-light">
+                <h1 class="text-uppercase">Ergebnisse des Experten&shy;workshops</h1>
+            </div>
+        </div>
+        <div class="row box box-light">
+            <div class="col-md-12 workshop">
+                <img src="img/workshop.jpg" alt="Workshop Blackout" style="">
+                <p>
+                    Zur Vorbereitung des Hackdays wurde am 06. August 2015 ein interdisziplinärer Workshop mit Expert/innen aus dem Bereich Energie und Open Data durchgeführt. Ziel des Workshops war es, die thematischen Schwerpunkte für den Hackday auszuarbeiten.
+                </p>
+                <p>
+                    Diskutiert wurden die Probleme, vor denen ein Blackout Berliner/innen stellen würde, welche Daten benötigt werden, um Lösungen zu entwickeln und wie die Ergebnisse des Hackdays weitergenutzt werden könnten. Die Dokumentation des Workshops kann <a href="docs/workshop_blackout.pdf">hier</a> heruntergeladen werden.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+		<footer class="row">
+	<div class="row border">
+		<div class="col-md-2">
+			Ein Projekt von
+		</div>
+		<div class="col-md-10 vcenter">
+			<a href="https://okfn.de"><img src="img/okf.png" class="logo-okf" alt="Logo Open Knowledge Foundation"/></a>
+			<a href="https://www.stromnetz-berlin.de"><img src="img/sb.png" class="logo-snb" alt="Logo Stromnetz Berlin"/></a>
+		</div>
+	</div>
+	<div class="row border">
+		<div class="col-md-2">
+			Partner
+		</div>
+		<div class="col-md-10 vcenter">
+			<a href="https://www.berlin.de/sen/wirtschaft/"><img src="img/senwtf.png" class="logo-senwtf" alt="Senatsverwaltung für Wirtschaft Technologie und Forschung"/></a>
+			<a href="http://www.smartb.de/home/"><img src="img/smartb.png" class="logo-smartb" alt="SmartB"/></a>
+			<a href="http://www.kki-gesellschaft.de/Seiten/Startseite.aspx"><img src="img/kki.png" class="logo-kki" alt="KKI"/></a>
+			<a href="https://www.technologiestiftung-berlin.de/"><img src="img/logo-tsb.png" class="logo-tsb" alt="KKI"/></a>
+			<a href="https://www.elink.tools/elink-tools/synpro/synpro-demo"><img src="img/ise.png" class="logo-tsb" alt="Fraunhofer ISE"/></a>
+		</div>
+	</div>
+	<div class="row border">
+		<div class="col-md-2">
+			Communitypartner
+		</div>
+		<div class="col-md-10 vcenter">
+			<a href="http://tacitdimension.com/"><img src="img/TacitDimensionLogo/TacitDimension.jpg" class="logo-tacitDimension" alt="tacitDimension"/></a>
+			<a href="http://geekgirlscarrots.org//"><img src="img/gcc_logo_dziewczynka-03.png" class="logo-ggc" alt="geekgirlcarrots"/></a>
+		</div>
+	</div>
+	<div class="row border">
+		<div class="col-md-2">
+			Sponsoren
+		</div>
+		<div class="col-md-10 vcenter">
+			<a href="http://de.mrcardboard.eu/"><img src="img/logo-cardboard.png" class="logo-cardboard" alt="Cardboard"/></a>
+			<a href="http://www.flora-power.de/"><img src="img/florapower.jpg" alt="Florapower" class="logo-tsb"></a>
+			<a href="http://www.rhabarberschorle.de"><img src="img/rhabarberschorle.png" alt="rhabarberschorle" class="logo-tsb"></a>
+		</div>
+	</div>
+	<div class="row border">
+		<div class="col-md-5 column-border">
+			<div class="row">
+				<div class="col-md-12">
+					<a href="mailto:helene.hahn@okfn.de">Kontakt</a>
+					<p>
+						Helene Hahn<br/>
+						Projektleiterin OKF DE<br/>
+						Mail: helene.hahn@okfn.de<br/>
+						Tel.: +49 30 57703666 2
+					</p>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<a href="mailto:helene.hahn@okfn.de">Sponsor werden</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<a href="https://github.com/okfde/energyhack">Auf Github forken</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-5 column-border">
+			<div class="row">
+				<div class="col-md-12"><a href="https://okfn.de/impressum/">Impressum</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">Open Knowledge Foundation</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">Deutschland e.V.</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">Singerstraße 109, 10179 Berlin</div>
+			</div>
+		</div>
+		<div class="col-md-2 column-border">
+			<div class="row">
+				<div class="col-md-12">Design:</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12"><a href="http://montebelo.org">Martin Wunderer - montebelo.org</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">Umsetzung</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12"><a href="https://okfn.de">Knut Perseke - Open Knowledge Foundation Deutschland</a></div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+		<button onClick="switchStyleSheet()" id="switch" class="styleswitch"></button>
+	</div>
+</div>
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script src="js/vendor/leaflet.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Piwik -->
+<script type="text/javascript">
+	var _paq = _paq || [];
+	_paq.push(['trackPageView']);
+	_paq.push(['enableLinkTracking']);
+	(function () {
+		var u = "//piwik.okfn.de/";
+		_paq.push(['setTrackerUrl', u + 'piwik.php']);
+		_paq.push(['setSiteId', 11]);
+		var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+		g.type = 'text/javascript';
+		g.async = true;
+		g.defer = true;
+		g.src = u + 'piwik.js';
+		s.parentNode.insertBefore(g, s);
+	})();
+</script>
+<noscript><p><img src="//piwik.okfn.de/piwik.php?idsite=11" style="border:0;" alt=""/></p></noscript>
+<!-- End Piwik Code -->
+</body>
+</html>

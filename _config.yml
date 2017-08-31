@@ -5,10 +5,16 @@ permalink: none
 # Template Variables
 title: 'EnergyHack Berlin'
 github_url: 'https://github.com/okfde/energyhack'
-twitter: '#'
-contact: 'julia.kloiber@okfn.org'
 
-# Navigation
-navigation:
-- text: 'Beispiele'
-  url: '/#beispiele'
+exclude:
+  - "CNAME"
+  - "Gemfile*"
+  - "*.sh"
+  - "browserslist"
+  - "README.md"
+  - ".idea/"
+  - ".git/"
+  - ".bundle/"
+  - "scripts/"
+  - "_site/"
+  - "vendor/"
