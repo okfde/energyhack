@@ -92,12 +92,16 @@ footer a {
 	color: #fff;
 }
 
+footer .row > div:first-of-type {
+	margin-bottom: 12px;
+}
+
 .logo {
 	text-align: center;
 }
 
 .logo img {
-	max-height: 120px;
+	max-height: 90px;
 	margin-bottom: 60px;
 	max-width: 95%;
 }
