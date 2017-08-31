@@ -59,6 +59,12 @@ h3 {
 	font-weight: normal;
 }
 
+.logo_energyhack {
+	max-height: 20px;
+	vertical-align: bottom;
+	margin-bottom: 20px;
+}
+
 .timetable ul {
 	margin-left: 0;
 	padding-left: 0;
