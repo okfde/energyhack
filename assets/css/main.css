@@ -154,4 +154,8 @@ header {
 		margin-left: 30px;
 		margin-right: 30px;
 	}
+
+	header {
+		padding-top: 0;
+	}
 }
