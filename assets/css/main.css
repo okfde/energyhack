@@ -162,14 +162,14 @@ footer .row > div:first-of-type {
 }
 
 .teaser h2 {
-	font-size: 50px;
-	line-height: 60px;
+	font-size: 54px;
+	line-height: 48px;
 }
 
 .teaser h3 {
 	text-align: center;
 	font-size: 40px;
-	line-height: 50px;
+	line-height: 36px;
 }
 
 .ascii-art {
@@ -177,6 +177,7 @@ footer .row > div:first-of-type {
 	width: 100%;
 	overflow: hidden;
 }
+
 .ascii-art pre {
 	margin-top: -50px;
 	font-size: 9px;
@@ -188,13 +189,13 @@ footer .row > div:first-of-type {
 	margin-bottom: 0;
 }
 
-
 @media (max-width: 934px) {
 	.nav-item {
 		margin-left: 4px;
 		margin-right: 4px;
 		font-size: 0.9em;
 	}
+
 	.ascii-art pre {
 		font-size: 8px;
 	}
@@ -205,6 +206,7 @@ footer .row > div:first-of-type {
 	.nav-item {
 		font-size: 0.8em;
 	}
+
 	.ascii-art pre {
 		font-size: 7px;
 	}
@@ -216,6 +218,7 @@ footer .row > div:first-of-type {
 		margin-right: 0;
 		font-size: 0.7em;
 	}
+
 	.ascii-art pre {
 		font-size: 6px;
 	}
@@ -225,6 +228,7 @@ footer .row > div:first-of-type {
 	.nav-item {
 		font-size: 0.6em;
 	}
+
 	.ascii-art pre {
 		font-size: 5px;
 	}
@@ -254,5 +258,33 @@ footer .row > div:first-of-type {
 	.navbar {
 		display: none !important;
 	}
+
+}
+
+@media (max-width: 360px) {
+	body {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	h1, h2 {
+		font-size: 54px;
+		line-height: 48px;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+
+
+	.teaser h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+
+	.teaser h3 {
+		text-align: center;
+		font-size: 24px;
+		line-height: 24px;
+	}
+
 
 }
