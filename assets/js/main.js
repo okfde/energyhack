@@ -7,25 +7,19 @@ function map() {
 }
 
 function animation() {
-
-	var element = document.getElementById('morph');
-	AsciiMorph(element, {x: 0, y: 0});
-
-	AsciiMorph.render(asciis[0]);
-
 	var currentIndex = 2;
-
-	setTimeout(function () {
-		AsciiMorph.morph(asciis[1]);
-
-		setInterval(function () {
+	var element = document.getElementById('morph');
+	AsciiMorph(element, {x: 0, y: 0}, function () {
+		setTimeout(function () {
 			AsciiMorph.morph(asciis[currentIndex]);
 			currentIndex++;
 			currentIndex %= asciis.length;
 		}, 10000);
-
+	});
+	AsciiMorph.render(asciis[0]);
+	setTimeout(function () {
+		AsciiMorph.morph(asciis[1]);
 	}, 4000);
-
 }
 
 function smoothscoll() {
