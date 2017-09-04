@@ -14,7 +14,7 @@ function animation() {
 			AsciiMorph.morph(asciis[currentIndex]);
 			currentIndex++;
 			currentIndex %= asciis.length;
-		}, 10000);
+		}, 4000);
 	});
 	AsciiMorph.render(asciis[0]);
 	setTimeout(function () {
