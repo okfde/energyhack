@@ -159,14 +159,18 @@ function pictransform(nr, src) {
 	$(c).mouseenter(function () {
 		click();
 	});
+
 }
 
 var pictransformers = function () {
 	pictransform(1, "2015/img/workshop.jpg");
+	pictransform(2, "2015/img/workshop.jpg");
+	$('.morphify').style.height = '400px';
 };
+
 $(document).ready(function () {
 	smoothscoll();
 	map();
 	animation();
-	pictransformers();
+	// pictransformers();
 });

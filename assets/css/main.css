@@ -200,7 +200,6 @@ footer .row > div:first-of-type {
 	background: #fff;
 	cursor: pointer;
 	display: block;
-	height: 400px;
 	width: 100%;
 }
 
@@ -300,34 +299,4 @@ footer .row > div:first-of-type {
 		line-height: 24px;
 	}
 
-}
-
-
-.tint {
-	position: relative;
-	float: left;
-	cursor: pointer;
-}
-
-.tint:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(67, 160, 71, 0.7);
-	-moz-transition: background .3s linear;
-	-webkit-transition: background .3s linear;
-	-o-transition: background .3s linear;
-	transition: background .3s linear;
-}
-
-.tint:hover:before {
-	background: none;
-}
-
-.tint img {
-	width: 100%;
 }
