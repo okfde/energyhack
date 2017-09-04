@@ -7,6 +7,6 @@ var transform = function (nr) {
 	}).join(',') + ']';
 };
 
-var data = 'var asciis = [' + [transform(1), transform(2), transform(3)].join(',') + '];';
+var data = 'var asciis = [' + [transform(1), transform(2), transform(3), transform(4)].join(',') + '];';
 
 fs.writeFileSync('../assets/js/ascii.js', data);
