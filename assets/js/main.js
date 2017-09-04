@@ -9,7 +9,7 @@ function map() {
 function animation() {
 	var currentIndex = 2;
 	var element = document.getElementById('morph');
-	AsciiMorph(element, {x: 0, y: 0}, function () {
+	AsciiMorph(element, {x: 0, y: 0}, 10, function () {
 		setTimeout(function () {
 			AsciiMorph.morph(asciis[currentIndex]);
 			currentIndex++;

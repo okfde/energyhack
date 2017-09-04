@@ -2,7 +2,7 @@
  * Ascii Morph
  * @author: Tim Holman (http://tholman.com)
  *
- * modified by ffalt: added an on end callback
+ * modified by ffalt: added aniSpeed parameter & on-end callback
  *
  */
 
@@ -17,6 +17,7 @@ var AsciiMorph = (function() {
 	var framesToAnimate = [];
 	var myTimeout = null;
 	var onEnd = null;
+	var speed = 10;
 
 	/**
 	 * Utils
@@ -49,11 +50,12 @@ var AsciiMorph = (function() {
 	 * AsciiMorph
 	 */
 
-	function init(el, canvasSize, endCallback) {
+	function init(el, canvasSize, aniSpeed, endCallback) {
 
 		// Save the element
 		element = el;
 		canvasDimensions = canvasSize;
+		speed = aniSpeed;
 		onEnd = endCallback;
 	}
 
@@ -233,19 +235,19 @@ var AsciiMorph = (function() {
 			} else if (onEnd) {
 				onEnd();
 			}
-		}, 20)
+		}, speed)
 
 		// framesToAnimate
 	}
 
-	function main(element, canvasSize , onEndCallback) {
+	function main(element, canvasSize, aniSpeed, onEndCallback) {
 
 		if( !element || !canvasSize ) {
 			console.log("sorry, I need an element and a canvas size");
 			return;
 		}
 
-		init(element, canvasSize, onEndCallback);
+		init(element, canvasSize, aniSpeed, onEndCallback);
 	}
 
 	return extend(main, {
