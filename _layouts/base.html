@@ -4,11 +4,48 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>{% if page.title %}{{ page.title }} › {% endif %}{{ site.title }}</title>
-	<meta name="description" content="{% if page.desc %}{{ page.desc }}{% endif %}">
-	<meta name="apple-mobile-web-app-title" content="Energyhack">
-	<meta name="application-name" content="Energyhack">
+	<meta name="apple-mobile-web-app-title" content="EnergyHack">
+	<meta name="application-name" content="EnergyHack">
 	<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+	{% if page.card %}
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@EnergyHackB" />
+	<meta name="twitter:creator" content="@okfde" />
+	{% if page.card.title %}
+	<meta name="og:title" content="{{ page.card.title }}" />
+	<meta name="twitter:title" content="{{ page.card.title }}" />
+	{% else if page.title %}
+	<meta name="og:title" content="{{ page.card.title }}" />
+	<meta name="twitter:title" content="{{ page.card.title }}" />
+	{% else %}
+	<meta name="og:title" content="{{ site.title }}">
+	<meta name="twitter:title" content="{{ site.title }}" />{% endif %}
+	{% if page.card.url %}
+	<meta name="og:url" content="{{ page.card.url }}" />
+	<meta name="twitter:url" content="{{ page.card.url }}" />
+	{% else if page.url %}
+	<meta name="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+	{% endif %}
+	{% if page.card.description %}
+	<meta name="twitter:description" content="{{ page.card.description }}" />
+	<meta name="og:description" content="{{ page.card.description }}" />
+	{% else if page.description %}
+	<meta name="twitter:description" content="{{ page.description }}" />
+	<meta name="og:description" content="{{ page.description }}" />
+	{% else if site.description %}
+	<meta name="twitter:description" content="{{ site.description }}" />
+	<meta name="og:description" content="{{ site.description }}" />
+	{% endif %}
+	{% if page.card.image %}
+	<meta name="twitter:image:src" content="{{site.fullurl}}{{ page.card.image }}" />
+	<meta name="og:image" content="{{site.fullurl}}{{ page.card.image }}" />
+	{% endif %}
+	{% endif %}
+	{% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+	<meta property="og:type" content="website" />
+
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
