@@ -199,8 +199,9 @@ footer .row > div:first-of-type {
 	overflow: hidden;
 	background: #fff;
 	cursor: pointer;
-	display: block;
 	width: 100%;
+	/*display: block;*/
+	display: none;
 }
 
 .morphify canvas, .morphify img {
