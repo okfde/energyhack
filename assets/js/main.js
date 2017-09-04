@@ -170,6 +170,6 @@ var pictransformers = function () {
 $(document).ready(function () {
 	smoothscoll();
 	map();
-	// animation();
+	animation();
 	// pictransformers();
 });
