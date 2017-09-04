@@ -194,6 +194,19 @@ footer .row > div:first-of-type {
 	margin: 0 -100%;
 }
 
+.morphify {
+	margin: 0;
+	overflow: hidden;
+	background: #fff;
+	display: block;
+	height: 400px;
+	width: 100%;
+}
+
+.morphify canvas, .morphify img {
+	width: 100%;
+}
+
 @media (max-width: 934px) {
 	.nav-item {
 		margin-left: 4px;
@@ -286,4 +299,34 @@ footer .row > div:first-of-type {
 		line-height: 24px;
 	}
 
+}
+
+
+.tint {
+	position: relative;
+	float: left;
+	cursor: pointer;
+}
+
+.tint:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(67, 160, 71, 0.7);
+	-moz-transition: background .3s linear;
+	-webkit-transition: background .3s linear;
+	-o-transition: background .3s linear;
+	transition: background .3s linear;
+}
+
+.tint:hover:before {
+	background: none;
+}
+
+.tint img {
+	width: 100%;
 }
