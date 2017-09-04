@@ -39,10 +39,11 @@ body {
 
 h1, h2 {
 	font-family: 'Miso Bold', sans-serif;
+	letter-spacing: 1px;
 }
 
 h3 {
-	font-family: 'Miso Regular', sans-serif;
+	font-family: 'Space Mono Regular', sans-serif;
 }
 
 h1, h2 {
@@ -162,18 +163,13 @@ footer .row > div:first-of-type {
 }
 
 .teaser h2 {
-	font-size: 54px;
+	font-family: 'Space Mono Regular', sans-serif;
+	font-size: 48px;
 	line-height: 48px;
 }
 
 .teaser h3 {
 	text-align: center;
-	font-size: 40px;
-	line-height: 36px;
-}
-
-.morph-containter {
-
 }
 
 .ascii-art {
@@ -291,9 +287,3 @@ footer .row > div:first-of-type {
 	}
 
 }
-
-/*@media (max-width: 320px) {*/
-/*.ascii-art pre {*/
-/*margin-left: -22%;*/
-/*}*/
-/*}*/
