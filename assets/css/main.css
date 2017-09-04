@@ -198,6 +198,7 @@ footer .row > div:first-of-type {
 	margin: 0;
 	overflow: hidden;
 	background: #fff;
+	cursor: pointer;
 	display: block;
 	height: 400px;
 	width: 100%;
