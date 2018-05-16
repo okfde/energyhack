@@ -103,6 +103,10 @@ footer .row > div:first-of-type {
 	margin-bottom: 12px;
 }
 
+footer .small {
+	font-size: 14px;
+}
+
 .logo {
 	text-align: center;
 }
