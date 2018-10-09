@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>{% if page.title %}{{ page.title }} › {% endif %}{{ site.title }}</title>
+	<meta name="apple-mobile-web-app-title" content="Energyhack" />
+	<meta name="application-name" content="Energyhack" />
+	<meta name="msapplication-config" content="assets/favicons/browserconfig.xml" />
+	<meta name="theme-color" content="#ffffff" />
+	{% if page.card %}
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@EnergyHackB" />
+	<meta name="twitter:creator" content="@okfde" />
+	{% if page.card.title %}
+	<meta name="og:title" content="{{ page.card.title }}" />
+	<meta name="twitter:title" content="{{ page.card.title }}" />
+	{% else if page.title %}
+	<meta name="og:title" content="{{ page.card.title }}" />
+	<meta name="twitter:title" content="{{ page.card.title }}" />
+	{% else %}
+	<meta name="og:title" content="{{ site.title }}">
+	<meta name="twitter:title" content="{{ site.title }}" />{% endif %}
+	{% if page.card.url %}
+	<meta name="og:url" content="{{ page.card.url }}" />
+	<meta name="twitter:url" content="{{ page.card.url }}" />
+	{% else if page.url %}
+	<meta name="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+	{% endif %}
+	{% if page.card.description %}
+	<meta name="twitter:description" content="{{ page.card.description }}" />
+	<meta name="og:description" content="{{ page.card.description }}" />
+	{% else if page.description %}
+	<meta name="twitter:description" content="{{ page.description }}" />
+	<meta name="og:description" content="{{ page.description }}" />
+	{% else if site.description %}
+	<meta name="twitter:description" content="{{ site.description }}" />
+	<meta name="og:description" content="{{ site.description }}" />
+	{% endif %}
+	{% if page.card.image %}
+	<meta name="twitter:image:src" content="{{site.fullurl}}{{ page.card.image }}" />
+	<meta name="og:image" content="{{site.fullurl}}{{ page.card.image }}" />
+	{% endif %}
+	{% endif %}
+	{% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+	<meta property="og:type" content="website" />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="assets/favicons/manifest.json">
+	<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#43a047">
+	<link rel="shortcut icon" href="assets/favicons/favicon.ico">
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/leaflet/leaflet.css" rel="stylesheet">
+	<link href="assets/css/main.css" rel="stylesheet">
+	<script src="assets/vendor/leaflet/leaflet.js"></script>
+	<script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="assets/vendor/tether/js/tether.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/asciiMorph.js"></script>
+	<script src="assets/js/ascii.js"></script>
+	<script src="assets/js/main.js"></script>
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="100">
+{% include 2017/oldbrowsers.html %}
+{% include 2017/header.html %}
+{% include 2017/teaser.html %}
+<div class="container">{{ content }}</div>
+{% include 2017/footer.html %}
+{% include 2017/piwik.html %}
+</body>
+</html>
+
