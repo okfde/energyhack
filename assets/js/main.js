@@ -1,9 +1,9 @@
 function map() {
 	var map_url = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 	var map_attribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-	var map = L.map('map', {scrollWheelZoom: false}).setView([52.48126, 13.35612], 17);
+	var map = L.map('map', {scrollWheelZoom: false}).setView([52.482777, 13.367506], 17);
 	L.tileLayer(map_url, {maxZoom: 18, attribution: map_attribution}).addTo(map);
-	L.marker([52.481826, 13.357598]).addTo(map).bindPopup('InfraLab Berlin').openPopup();
+	L.marker([52.482777, 13.367506]).addTo(map).bindPopup('InfraLab Berlin').openPopup();
 }
 
 function animation() {
